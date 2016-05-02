@@ -3,7 +3,7 @@ p7zip with ZStandard support.
 
 ## Build instructions:
 
-### Quick and dirty build
+### Easy way
 
 Read makefile.common to see available make targets. If you're in a hurry:
 - Download https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_15.14.1_zstd_src_all.tar.bz2
