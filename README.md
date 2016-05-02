@@ -44,5 +44,6 @@ Ultra mode, bcj processing
 ```
 
 ## References:
-Original sources for Zstd plugin: https://mcmilk.de/projects/7-Zip-ZStd/
-Original p7zip sources: http://p7zip.sourceforge.net/
+- Original sources for Zstd: https://github.com/Cyan4973/zstd
+- Original sources for Zstd plugin: https://mcmilk.de/projects/7-Zip-ZStd/
+- Original p7zip sources: http://p7zip.sourceforge.net/
