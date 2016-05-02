@@ -30,7 +30,7 @@ Fastest mode, no bcj processing
 
 Fast mode, bcj processing
 ```
-7z a archive.7z -m0=zstd -mx1
+7z a archive.7z -m0=zstd -mx1 ...
 ```
 
 Slow mode, bcj processing
@@ -40,5 +40,5 @@ Slow mode, bcj processing
 
 Ultra mode, bcj processing
 ```
-7z a archiv.7z -m0=zstd -mx22 ..
+7z a archive.7z -m0=zstd -mx22 ..
 ```
