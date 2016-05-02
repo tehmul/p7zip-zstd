@@ -42,3 +42,7 @@ Ultra mode, bcj processing
 ```
 7z a archive.7z -m0=zstd -mx22 ..
 ```
+
+## References:
+Original sources for Zstd plugin: https://mcmilk.de/projects/7-Zip-ZStd/
+Original p7zip sources: http://p7zip.sourceforge.net/
