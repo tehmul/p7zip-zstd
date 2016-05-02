@@ -21,3 +21,24 @@ and apply the patch using:
 ```sh
 patch -p0 <p7zip_15.14.1_ZStd.diff
 ```
+## Usage
+
+Fastest mode, no bcj processing
+```
+7z a archive.7z -m0=zstd -mx0 ...
+```
+
+Fast mode, bcj processing
+```
+7z a archive.7z -m0=zstd -mx1
+```
+
+Slow mode, bcj processing
+```
+7z a archive.7z -m0=zstd -mx21 ..
+```
+
+Ultra mode, bcj processing
+```
+7z a archiv.7z -m0=zstd -mx22 ..
+```
