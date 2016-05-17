@@ -23,6 +23,12 @@ patch -p0 <p7zip_15.14.1_ZStd.diff
 ```
 ## Usage
 
+No args given, standard 7-zip behavior
+```
+7z a archive.7z ...
+
+```
+
 Fastest mode, no bcj processing
 ```
 7z a archive.7z -m0=zstd -mx0 ...
