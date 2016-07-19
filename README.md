@@ -32,22 +32,22 @@ No args given, standard 7-zip behavior
 
 Fastest mode, no bcj processing
 ```
-7za a archive.7z -m0=zstd -mx0 ...
+7z a archive.7z -m0=zstd -mx0 ...
 ```
 
 Fast mode, bcj processing
 ```
-7za a archive.7z -m0=zstd -mx1 ...
+7z a archive.7z -m0=zstd -mx1 ...
 ```
 
 Slow mode, bcj processing
 ```
-7za a archive.7z -m0=zstd -mx21 ..
+7z a archive.7z -m0=zstd -mx21 ..
 ```
 
 Ultra mode, bcj processing
 ```
-7za a archive.7z -m0=zstd -mx22 ..
+7z a archive.7z -m0=zstd -mx22 ..
 ```
 
 ## References:

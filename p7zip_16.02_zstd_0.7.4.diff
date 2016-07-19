@@ -1,6 +1,6 @@
 diff -ruN p7zip_16.02-stock/C/ZStd/bitstream.h p7zip_16.02/C/ZStd/bitstream.h
 --- p7zip_16.02-stock/C/ZStd/bitstream.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/bitstream.h	2016-07-18 13:46:57.631080832 +0530
++++ p7zip_16.02/C/ZStd/bitstream.h	2016-07-18 14:19:36.590545692 +0530
 @@ -0,0 +1,414 @@
 +/* ******************************************************************
 +   bitstream
@@ -418,7 +418,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/bitstream.h p7zip_16.02/C/ZStd/bitstream.h
 +#endif /* BITSTREAM_H_MODULE */
 diff -ruN p7zip_16.02-stock/C/ZStd/entropy_common.c p7zip_16.02/C/ZStd/entropy_common.c
 --- p7zip_16.02-stock/C/ZStd/entropy_common.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/entropy_common.c	2016-07-18 13:46:57.635080748 +0530
++++ p7zip_16.02/C/ZStd/entropy_common.c	2016-07-18 14:19:36.594545610 +0530
 @@ -0,0 +1,231 @@
 +/*
 +   Common functions of New Generation Entropy library
@@ -653,7 +653,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/entropy_common.c p7zip_16.02/C/ZStd/entropy_c
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/error_private.h p7zip_16.02/C/ZStd/error_private.h
 --- p7zip_16.02-stock/C/ZStd/error_private.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/error_private.h	2016-07-18 13:46:57.639080666 +0530
++++ p7zip_16.02/C/ZStd/error_private.h	2016-07-18 14:19:36.594545610 +0530
 @@ -0,0 +1,125 @@
 +/* ******************************************************************
 +   Error codes and messages
@@ -782,7 +782,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/error_private.h p7zip_16.02/C/ZStd/error_priv
 +#endif /* ERROR_H_MODULE */
 diff -ruN p7zip_16.02-stock/C/ZStd/error_public.h p7zip_16.02/C/ZStd/error_public.h
 --- p7zip_16.02-stock/C/ZStd/error_public.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/error_public.h	2016-07-18 13:46:57.643080583 +0530
++++ p7zip_16.02/C/ZStd/error_public.h	2016-07-18 14:19:36.594545610 +0530
 @@ -0,0 +1,77 @@
 +/* ******************************************************************
 +   Error codes list
@@ -863,7 +863,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/error_public.h p7zip_16.02/C/ZStd/error_publi
 +#endif /* ERROR_PUBLIC_H_MODULE */
 diff -ruN p7zip_16.02-stock/C/ZStd/fse_compress.c p7zip_16.02/C/ZStd/fse_compress.c
 --- p7zip_16.02-stock/C/ZStd/fse_compress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/fse_compress.c	2016-07-18 13:46:57.655080334 +0530
++++ p7zip_16.02/C/ZStd/fse_compress.c	2016-07-18 14:19:36.594545610 +0530
 @@ -0,0 +1,807 @@
 +/* ******************************************************************
 +   FSE : Finite State Entropy encoder
@@ -1674,7 +1674,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/fse_compress.c p7zip_16.02/C/ZStd/fse_compres
 +#endif   /* FSE_COMMONDEFS_ONLY */
 diff -ruN p7zip_16.02-stock/C/ZStd/fse_decompress.c p7zip_16.02/C/ZStd/fse_decompress.c
 --- p7zip_16.02-stock/C/ZStd/fse_decompress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/fse_decompress.c	2016-07-18 13:46:57.659080251 +0530
++++ p7zip_16.02/C/ZStd/fse_decompress.c	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,331 @@
 +/* ******************************************************************
 +   FSE : Finite State Entropy decoder
@@ -2009,7 +2009,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/fse_decompress.c p7zip_16.02/C/ZStd/fse_decom
 +#endif   /* FSE_COMMONDEFS_ONLY */
 diff -ruN p7zip_16.02-stock/C/ZStd/fse.h p7zip_16.02/C/ZStd/fse.h
 --- p7zip_16.02-stock/C/ZStd/fse.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/fse.h	2016-07-18 13:46:57.651080417 +0530
++++ p7zip_16.02/C/ZStd/fse.h	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,628 @@
 +/* ******************************************************************
 +   FSE : Finite State Entropy codec
@@ -2641,7 +2641,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/fse.h p7zip_16.02/C/ZStd/fse.h
 +#endif  /* FSE_H */
 diff -ruN p7zip_16.02-stock/C/ZStd/huf_compress.c p7zip_16.02/C/ZStd/huf_compress.c
 --- p7zip_16.02-stock/C/ZStd/huf_compress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/huf_compress.c	2016-07-18 13:46:57.671080003 +0530
++++ p7zip_16.02/C/ZStd/huf_compress.c	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,576 @@
 +/* ******************************************************************
 +   Huffman encoder, part of New Generation Entropy library
@@ -3221,7 +3221,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/huf_compress.c p7zip_16.02/C/ZStd/huf_compres
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/huf_decompress.c p7zip_16.02/C/ZStd/huf_decompress.c
 --- p7zip_16.02-stock/C/ZStd/huf_decompress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/huf_decompress.c	2016-07-18 13:46:57.679079837 +0530
++++ p7zip_16.02/C/ZStd/huf_decompress.c	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,894 @@
 +/* ******************************************************************
 +   Huffman decoder, part of New Generation Entropy library
@@ -4119,7 +4119,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/huf_decompress.c p7zip_16.02/C/ZStd/huf_decom
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/huf.h p7zip_16.02/C/ZStd/huf.h
 --- p7zip_16.02-stock/C/ZStd/huf.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/huf.h	2016-07-18 13:46:57.667080085 +0530
++++ p7zip_16.02/C/ZStd/huf.h	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,228 @@
 +/* ******************************************************************
 +   Huffman coder, part of New Generation Entropy library
@@ -4351,7 +4351,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/huf.h p7zip_16.02/C/ZStd/huf.h
 +#endif   /* HUF_H_298734234 */
 diff -ruN p7zip_16.02-stock/C/ZStd/mem.h p7zip_16.02/C/ZStd/mem.h
 --- p7zip_16.02-stock/C/ZStd/mem.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/mem.h	2016-07-18 13:46:57.687079672 +0530
++++ p7zip_16.02/C/ZStd/mem.h	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,377 @@
 +/* ******************************************************************
 +   mem.h
@@ -4732,7 +4732,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/mem.h p7zip_16.02/C/ZStd/mem.h
 +
 diff -ruN p7zip_16.02-stock/C/ZStd/xxhash.c p7zip_16.02/C/ZStd/xxhash.c
 --- p7zip_16.02-stock/C/ZStd/xxhash.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/xxhash.c	2016-07-18 13:46:57.695079505 +0530
++++ p7zip_16.02/C/ZStd/xxhash.c	2016-07-18 14:19:36.598545527 +0530
 @@ -0,0 +1,854 @@
 +/*
 +*  xxHash - Fast Hash algorithm
@@ -5590,7 +5590,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/xxhash.c p7zip_16.02/C/ZStd/xxhash.c
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/xxhash.h p7zip_16.02/C/ZStd/xxhash.h
 --- p7zip_16.02-stock/C/ZStd/xxhash.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/xxhash.h	2016-07-18 13:46:57.703079339 +0530
++++ p7zip_16.02/C/ZStd/xxhash.h	2016-07-18 14:19:36.602545444 +0530
 @@ -0,0 +1,273 @@
 +/*
 +   xxHash - Extremely Fast Hash algorithm
@@ -5867,7 +5867,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/xxhash.h p7zip_16.02/C/ZStd/xxhash.h
 +#endif /* XXHASH_H_5627135585666179 */
 diff -ruN p7zip_16.02-stock/C/ZStd/zbuff_compress.c p7zip_16.02/C/ZStd/zbuff_compress.c
 --- p7zip_16.02-stock/C/ZStd/zbuff_compress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zbuff_compress.c	2016-07-18 13:46:57.719079008 +0530
++++ p7zip_16.02/C/ZStd/zbuff_compress.c	2016-07-18 14:19:36.602545444 +0530
 @@ -0,0 +1,327 @@
 +/*
 +    Buffered version of Zstd compression library
@@ -6198,7 +6198,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zbuff_compress.c p7zip_16.02/C/ZStd/zbuff_com
 +size_t ZBUFF_recommendedCOutSize(void) { return ZSTD_compressBound(ZSTD_BLOCKSIZE_MAX) + ZSTD_blockHeaderSize + ZBUFF_endFrameSize; }
 diff -ruN p7zip_16.02-stock/C/ZStd/zbuff_decompress.c p7zip_16.02/C/ZStd/zbuff_decompress.c
 --- p7zip_16.02-stock/C/ZStd/zbuff_decompress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zbuff_decompress.c	2016-07-18 13:46:57.799077351 +0530
++++ p7zip_16.02/C/ZStd/zbuff_decompress.c	2016-07-18 14:19:36.602545444 +0530
 @@ -0,0 +1,294 @@
 +/*
 +    Buffered version of Zstd compression library
@@ -6496,7 +6496,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zbuff_decompress.c p7zip_16.02/C/ZStd/zbuff_d
 +size_t ZBUFF_recommendedDOutSize(void) { return ZSTD_BLOCKSIZE_MAX; }
 diff -ruN p7zip_16.02-stock/C/ZStd/zbuff.h p7zip_16.02/C/ZStd/zbuff.h
 --- p7zip_16.02-stock/C/ZStd/zbuff.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zbuff.h	2016-07-18 13:46:57.707079257 +0530
++++ p7zip_16.02/C/ZStd/zbuff.h	2016-07-18 14:19:36.602545444 +0530
 @@ -0,0 +1,197 @@
 +/*
 +    Buffered version of Zstd compression library
@@ -6697,7 +6697,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zbuff.h p7zip_16.02/C/ZStd/zbuff.h
 +#endif  /* ZSTD_BUFFERED_H_23987 */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_common.c p7zip_16.02/C/ZStd/zstd_common.c
 --- p7zip_16.02-stock/C/ZStd/zstd_common.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_common.c	2016-07-18 13:46:57.807077185 +0530
++++ p7zip_16.02/C/ZStd/zstd_common.c	2016-07-18 14:19:36.602545444 +0530
 @@ -0,0 +1,91 @@
 +/*
 +    Common functions of Zstd compression library
@@ -6792,7 +6792,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_common.c p7zip_16.02/C/ZStd/zstd_common.
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_compress.c p7zip_16.02/C/ZStd/zstd_compress.c
 --- p7zip_16.02-stock/C/ZStd/zstd_compress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_compress.c	2016-07-18 13:46:57.819076937 +0530
++++ p7zip_16.02/C/ZStd/zstd_compress.c	2016-07-18 14:19:36.606545361 +0530
 @@ -0,0 +1,3076 @@
 +/*
 +    ZSTD HC - High Compression Mode of Zstandard
@@ -9872,7 +9872,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_compress.c p7zip_16.02/C/ZStd/zstd_compr
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_decompress.c p7zip_16.02/C/ZStd/zstd_decompress.c
 --- p7zip_16.02-stock/C/ZStd/zstd_decompress.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_decompress.c	2016-07-18 13:46:57.839076522 +0530
++++ p7zip_16.02/C/ZStd/zstd_decompress.c	2016-07-18 14:19:36.606545361 +0530
 @@ -0,0 +1,1362 @@
 +/*
 +    zstd - standard compression library
@@ -11238,7 +11238,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_decompress.c p7zip_16.02/C/ZStd/zstd_dec
 +}
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd.h p7zip_16.02/C/ZStd/zstd.h
 --- p7zip_16.02-stock/C/ZStd/zstd.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd.h	2016-07-18 13:46:57.807077185 +0530
++++ p7zip_16.02/C/ZStd/zstd.h	2016-07-18 14:19:36.606545361 +0530
 @@ -0,0 +1,475 @@
 +/*
 +    zstd - standard compression library
@@ -11717,7 +11717,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd.h p7zip_16.02/C/ZStd/zstd.h
 +#endif  /* ZSTD_H_235446 */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_internal.h p7zip_16.02/C/ZStd/zstd_internal.h
 --- p7zip_16.02-stock/C/ZStd/zstd_internal.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_internal.h	2016-07-18 13:46:57.855076191 +0530
++++ p7zip_16.02/C/ZStd/zstd_internal.h	2016-07-18 14:19:36.606545361 +0530
 @@ -0,0 +1,238 @@
 +/*
 +    zstd_internal - common functions to include
@@ -11959,7 +11959,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_internal.h p7zip_16.02/C/ZStd/zstd_inter
 +#endif   /* ZSTD_CCOMMON_H_MODULE */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_legacy.h p7zip_16.02/C/ZStd/zstd_legacy.h
 --- p7zip_16.02-stock/C/ZStd/zstd_legacy.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_legacy.h	2016-07-18 13:46:57.863076025 +0530
++++ p7zip_16.02/C/ZStd/zstd_legacy.h	2016-07-18 14:19:36.610545279 +0530
 @@ -0,0 +1,99 @@
 +/*
 +    zstd_legacy - decoder for legacy format
@@ -12062,7 +12062,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_legacy.h p7zip_16.02/C/ZStd/zstd_legacy.
 +#endif   /* ZSTD_LEGACY_H */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_opt.h p7zip_16.02/C/ZStd/zstd_opt.h
 --- p7zip_16.02-stock/C/ZStd/zstd_opt.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_opt.h	2016-07-18 13:46:57.867075942 +0530
++++ p7zip_16.02/C/ZStd/zstd_opt.h	2016-07-18 14:19:36.610545279 +0530
 @@ -0,0 +1,1046 @@
 +/*
 +    ZSTD Optimal mode
@@ -13112,7 +13112,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_opt.h p7zip_16.02/C/ZStd/zstd_opt.h
 +#endif  /* ZSTD_OPT_H_91842398743 */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v05.c p7zip_16.02/C/ZStd/zstd_v05.c
 --- p7zip_16.02-stock/C/ZStd/zstd_v05.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_v05.c	2016-07-18 13:46:57.875075776 +0530
++++ p7zip_16.02/C/ZStd/zstd_v05.c	2016-07-18 14:19:36.614545195 +0530
 @@ -0,0 +1,4726 @@
 +/* ******************************************************************
 +   zstd_v05.c
@@ -17842,7 +17842,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v05.c p7zip_16.02/C/ZStd/zstd_v05.c
 +size_t ZBUFFv05_recommendedDOutSize(void) { return BLOCKSIZE; }
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v05.h p7zip_16.02/C/ZStd/zstd_v05.h
 --- p7zip_16.02-stock/C/ZStd/zstd_v05.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_v05.h	2016-07-18 13:46:57.903075196 +0530
++++ p7zip_16.02/C/ZStd/zstd_v05.h	2016-07-18 14:19:36.614545195 +0530
 @@ -0,0 +1,156 @@
 +/*
 +    zstd_v05 - decoder for 0.5 format
@@ -18002,7 +18002,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v05.h p7zip_16.02/C/ZStd/zstd_v05.h
 +#endif  /* ZSTDv0505_H */
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v06.c p7zip_16.02/C/ZStd/zstd_v06.c
 --- p7zip_16.02-stock/C/ZStd/zstd_v06.c	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_v06.c	2016-07-18 13:46:57.907075113 +0530
++++ p7zip_16.02/C/ZStd/zstd_v06.c	2016-07-18 14:19:36.638544698 +0530
 @@ -0,0 +1,4583 @@
 +/* ******************************************************************
 +   zstd_v06.c
@@ -22589,7 +22589,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v06.c p7zip_16.02/C/ZStd/zstd_v06.c
 +size_t ZBUFFv06_recommendedDOutSize(void) { return ZSTDv06_BLOCKSIZE_MAX; }
 diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v06.h p7zip_16.02/C/ZStd/zstd_v06.h
 --- p7zip_16.02-stock/C/ZStd/zstd_v06.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/C/ZStd/zstd_v06.h	2016-07-18 13:46:57.915074947 +0530
++++ p7zip_16.02/C/ZStd/zstd_v06.h	2016-07-18 14:19:36.638544698 +0530
 @@ -0,0 +1,185 @@
 +/*
 +    zstd_v06 - decoder for 0.6 format
@@ -22778,7 +22778,7 @@ diff -ruN p7zip_16.02-stock/C/ZStd/zstd_v06.h p7zip_16.02/C/ZStd/zstd_v06.h
 +#endif  /* ZSTDv06_BUFFERED_H */
 diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandler.cpp p7zip_16.02/CPP/7zip/Archive/7z/7zHandler.cpp
 --- p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandler.cpp	2016-05-20 13:50:03.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Archive/7z/7zHandler.cpp	2016-07-18 13:38:42.817306793 +0530
++++ p7zip_16.02/CPP/7zip/Archive/7z/7zHandler.cpp	2016-07-18 14:19:36.638544698 +0530
 @@ -450,6 +450,32 @@
            GetStringForSizeValue(dest, GetUi32(props + 1));
          }
@@ -22814,7 +22814,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandler.cpp p7zip_16.02/CPP/7z
          name = "Delta";
 diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandlerOut.cpp p7zip_16.02/CPP/7zip/Archive/7z/7zHandlerOut.cpp
 --- p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandlerOut.cpp	2016-05-20 13:50:03.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Archive/7z/7zHandlerOut.cpp	2016-07-18 13:39:16.800605839 +0530
++++ p7zip_16.02/CPP/7zip/Archive/7z/7zHandlerOut.cpp	2016-07-18 14:19:36.642544616 +0530
 @@ -606,7 +606,8 @@
    options.Method = &methodMode;
    options.HeaderMethod = (_compressHeaders || encryptHeaders) ? &headerMethod : NULL;
@@ -22827,7 +22827,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHandlerOut.cpp p7zip_16.02/CPP
    options.HeaderOptions.CompressMainHeader = compressMainHeader;
 diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHeader.h p7zip_16.02/CPP/7zip/Archive/7z/7zHeader.h
 --- p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHeader.h	2015-06-19 16:22:06.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Archive/7z/7zHeader.h	2016-07-18 13:39:46.851985898 +0530
++++ p7zip_16.02/CPP/7zip/Archive/7z/7zHeader.h	2016-07-18 14:19:36.642544616 +0530
 @@ -119,6 +119,8 @@
  const UInt32 k_ARMT  = 0x3030701;
  const UInt32 k_SPARC = 0x3030805;
@@ -22839,7 +22839,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Archive/7z/7zHeader.h p7zip_16.02/CPP/7zip/
  
 diff -ruN p7zip_16.02-stock/CPP/7zip/Bundles/Alone/makefile.list p7zip_16.02/CPP/7zip/Bundles/Alone/makefile.list
 --- p7zip_16.02-stock/CPP/7zip/Bundles/Alone/makefile.list	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Bundles/Alone/makefile.list	2016-07-18 13:57:29.374003169 +0530
++++ p7zip_16.02/CPP/7zip/Bundles/Alone/makefile.list	2016-07-19 16:45:02.407724171 +0530
 @@ -126,6 +126,9 @@
    ../../../../CPP/7zip/Compress/QuantumDecoder.cpp \
    ../../../../CPP/7zip/Compress/ShrinkDecoder.cpp \
@@ -22946,9 +22946,118 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Bundles/Alone/makefile.list p7zip_16.02/CPP
   7zAes.o \
   7zAesRegister.o \
   HmacSha1.o \
+diff -ruN p7zip_16.02-stock/CPP/7zip/Bundles/Format7zFree/makefile.list p7zip_16.02/CPP/7zip/Bundles/Format7zFree/makefile.list
+--- p7zip_16.02-stock/CPP/7zip/Bundles/Format7zFree/makefile.list	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/Bundles/Format7zFree/makefile.list	2016-07-19 16:45:02.407724171 +0530
+@@ -183,6 +183,9 @@
+   ../../../../CPP/7zip/Compress/XpressDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/Crypto/7zAes.cpp \
+   ../../../../CPP/7zip/Crypto/7zAesRegister.cpp \
+   ../../../../CPP/7zip/Crypto/HmacSha1.cpp \
+@@ -265,6 +268,19 @@
+   ../../../../C/XzDec.c \
+   ../../../../C/XzEnc.c \
+   ../../../../C/XzIn.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+ 
+ StdAfx.h.gch : ../../../myWindows/StdAfx.h
+ 	rm -f StdAfx.h.gch
+@@ -347,6 +363,32 @@
+ 	$(CC) $(CFLAGS) ../../../../C/XzEnc.c
+ XzIn.o : ../../../../C/XzIn.c
+ 	$(CC) $(CFLAGS) ../../../../C/XzIn.c
++entropy_common.o : ../../../../C/ZStd/entropy_common.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
++fse_compress.o : ../../../../C/ZStd/fse_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
++fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_decompress.c
++huf_compress.o : ../../../../C/ZStd/huf_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_compress.c
++huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
++xxhash.o : ../../../../C/ZStd/xxhash.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
++zbuff_compress.o : ../../../../C/ZStd/zbuff_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_compress.c
++zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
++zstd_common.o : ../../../../C/ZStd/zstd_common.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
++zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
++zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
++zstd_v05.o : ../../../../C/ZStd/zstd_v05.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v05.c
++zstd_v06.o : ../../../../C/ZStd/zstd_v06.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v06.c
+ 7zCompressionMode.o : ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
+ 7zDecode.o : ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
+@@ -677,6 +719,12 @@
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZlibDecoder.cpp
+ ZlibEncoder.o : ../../../../CPP/7zip/Compress/ZlibEncoder.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZlibEncoder.cpp
++ZstdDecoder.o : ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
++ZstdEncoder.o : ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
++ZstdRegister.o : ../../../../CPP/7zip/Compress/ZstdRegister.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdRegister.cpp
+ 7zAes.o : ../../../../CPP/7zip/Crypto/7zAes.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Crypto/7zAes.cpp
+ 7zAesRegister.o : ../../../../CPP/7zip/Crypto/7zAesRegister.cpp
+@@ -800,6 +848,19 @@
+  XzDec.o \
+  XzEnc.o \
+  XzIn.o \
++ entropy_common.o \
++ fse_compress.o \
++ fse_decompress.o \
++ huf_compress.o \
++ huf_decompress.o \
++ xxhash.o \
++ zbuff_compress.o \
++ zbuff_decompress.o \
++ zstd_common.o \
++ zstd_compress.o \
++ zstd_decompress.o \
++ zstd_v05.o \
++ zstd_v06.o \
+  7zCompressionMode.o \
+  7zDecode.o \
+  7zEncode.o \
+@@ -965,6 +1026,9 @@
+  XpressDecoder.o \
+  ZlibDecoder.o \
+  ZlibEncoder.o \
++ ZstdDecoder.o \
++ ZstdEncoder.o \
++ ZstdRegister.o \
+  7zAes.o \
+  7zAesRegister.o \
+  HmacSha1.o \
 diff -ruN p7zip_16.02-stock/CPP/7zip/Bundles/SFXCon/makefile.list p7zip_16.02/CPP/7zip/Bundles/SFXCon/makefile.list
 --- p7zip_16.02-stock/CPP/7zip/Bundles/SFXCon/makefile.list	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Bundles/SFXCon/makefile.list	2016-07-18 13:57:29.474001100 +0530
++++ p7zip_16.02/CPP/7zip/Bundles/SFXCon/makefile.list	2016-07-19 16:45:02.411724089 +0530
 @@ -58,6 +58,8 @@
    ../../../../CPP/7zip/Compress/LzmaRegister.cpp \
    ../../../../CPP/7zip/Compress/PpmdDecoder.cpp \
@@ -23027,9 +23136,42 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Bundles/SFXCon/makefile.list p7zip_16.02/CP
   7zAes.o \
   7zAesRegister.o \
   MyAes.o \
+diff -ruN p7zip_16.02-stock/CPP/7zip/CMAKE/7z_/CMakeLists.txt p7zip_16.02/CPP/7zip/CMAKE/7z_/CMakeLists.txt
+--- p7zip_16.02-stock/CPP/7zip/CMAKE/7z_/CMakeLists.txt	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/CMAKE/7z_/CMakeLists.txt	2016-07-19 16:45:02.415724007 +0530
+@@ -23,6 +23,19 @@
+   "../../../../C/Alloc.c"
+   "../../../../C/CpuArch.c"
+   "../../../../C/Threads.c"
++  "../../../../C/ZStd/entropy_common.c"
++  "../../../../C/ZStd/fse_compress.c"
++  "../../../../C/ZStd/fse_decompress.c"
++  "../../../../C/ZStd/huf_compress.c"
++  "../../../../C/ZStd/huf_decompress.c"
++  "../../../../C/ZStd/xxhash.c"
++  "../../../../C/ZStd/zbuff_compress.c"
++  "../../../../C/ZStd/zbuff_decompress.c"
++  "../../../../C/ZStd/zstd_common.c"
++  "../../../../C/ZStd/zstd_compress.c"
++  "../../../../C/ZStd/zstd_decompress.c"
++  "../../../../C/ZStd/zstd_v05.c"
++  "../../../../C/ZStd/zstd_v06.c"
+   "../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp"
+   "../../../../CPP/7zip/Common/CreateCoder.cpp"
+   "../../../../CPP/7zip/Common/FilePathAutoRename.cpp"
+@@ -36,6 +49,9 @@
+   "../../../../CPP/7zip/Common/StreamUtils.cpp"
+   "../../../../CPP/7zip/Common/UniqBlocks.cpp"
+   "../../../../CPP/7zip/Compress/CopyCoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdDecoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdEncoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdRegister.cpp"
+   "../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp"
+   "../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp"
+   "../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp"
 diff -ruN p7zip_16.02-stock/CPP/7zip/CMAKE/7za/CMakeLists.txt p7zip_16.02/CPP/7zip/CMAKE/7za/CMakeLists.txt
 --- p7zip_16.02-stock/CPP/7zip/CMAKE/7za/CMakeLists.txt	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/CMAKE/7za/CMakeLists.txt	2016-07-18 13:57:29.577998948 +0530
++++ p7zip_16.02/CPP/7zip/CMAKE/7za/CMakeLists.txt	2016-07-19 16:45:02.415724007 +0530
 @@ -55,6 +55,19 @@
    "../../../../C/XzDec.c"
    "../../../../C/XzEnc.c"
@@ -23060,9 +23202,42 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/CMAKE/7za/CMakeLists.txt p7zip_16.02/CPP/7z
    "../../../../CPP/7zip/Crypto/7zAes.cpp"
    "../../../../CPP/7zip/Crypto/7zAesRegister.cpp"
    "../../../../CPP/7zip/Crypto/HmacSha1.cpp"
+diff -ruN p7zip_16.02-stock/CPP/7zip/CMAKE/Format7zFree/CMakeLists.txt p7zip_16.02/CPP/7zip/CMAKE/Format7zFree/CMakeLists.txt
+--- p7zip_16.02-stock/CPP/7zip/CMAKE/Format7zFree/CMakeLists.txt	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/CMAKE/Format7zFree/CMakeLists.txt	2016-07-19 16:45:02.415724007 +0530
+@@ -57,6 +57,19 @@
+   "../../../../C/XzDec.c"
+   "../../../../C/XzEnc.c"
+   "../../../../C/XzIn.c"
++  "../../../../C/ZStd/entropy_common.c"
++  "../../../../C/ZStd/fse_compress.c"
++  "../../../../C/ZStd/fse_decompress.c"
++  "../../../../C/ZStd/huf_compress.c"
++  "../../../../C/ZStd/huf_decompress.c"
++  "../../../../C/ZStd/xxhash.c"
++  "../../../../C/ZStd/zbuff_compress.c"
++  "../../../../C/ZStd/zbuff_decompress.c"
++  "../../../../C/ZStd/zstd_common.c"
++  "../../../../C/ZStd/zstd_compress.c"
++  "../../../../C/ZStd/zstd_decompress.c"
++  "../../../../C/ZStd/zstd_v05.c"
++  "../../../../C/ZStd/zstd_v06.c"
+   "../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp"
+   "../../../../CPP/7zip/Archive/7z/7zDecode.cpp"
+   "../../../../CPP/7zip/Archive/7z/7zEncode.cpp"
+@@ -222,6 +235,9 @@
+   "../../../../CPP/7zip/Compress/XpressDecoder.cpp"
+   "../../../../CPP/7zip/Compress/ZlibDecoder.cpp"
+   "../../../../CPP/7zip/Compress/ZlibEncoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdDecoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdEncoder.cpp"
++  "../../../../CPP/7zip/Compress/ZstdRegister.cpp"
+   "../../../../CPP/7zip/Crypto/7zAes.cpp"
+   "../../../../CPP/7zip/Crypto/7zAesRegister.cpp"
+   "../../../../CPP/7zip/Crypto/HmacSha1.cpp"
 diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.cpp p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.cpp
 --- p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.cpp	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.cpp	2016-07-18 13:58:30.568737075 +0530
++++ p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.cpp	2016-07-18 14:19:36.642544616 +0530
 @@ -0,0 +1,405 @@
 +// ZstdDecoder.cpp
 +// (C) 2016 Rich Geldreich, Tino Reichardt
@@ -23471,7 +23646,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.cpp p7zip_16.02/CPP/7z
 +}}
 diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.h p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.h
 --- p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.h	2016-07-18 13:58:30.584736745 +0530
++++ p7zip_16.02/CPP/7zip/Compress/ZstdDecoder.h	2016-07-18 14:19:36.642544616 +0530
 @@ -0,0 +1,111 @@
 +// ZstdDecoder.h
 +// (C) 2016 Rich Geldreich, Tino Reichardt
@@ -23586,7 +23761,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdDecoder.h p7zip_16.02/CPP/7zip
 +}}
 diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.cpp p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.cpp
 --- p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.cpp	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.cpp	2016-07-18 13:58:30.592736579 +0530
++++ p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.cpp	2016-07-18 14:19:36.642544616 +0530
 @@ -0,0 +1,192 @@
 +// ZstdEncoder.cpp
 +// (C) 2016 Rich Geldreich, Tino Reichardt
@@ -23782,7 +23957,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.cpp p7zip_16.02/CPP/7z
 +#endif
 diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.h p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.h
 --- p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.h	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.h	2016-07-18 13:58:30.592736579 +0530
++++ p7zip_16.02/CPP/7zip/Compress/ZstdEncoder.h	2016-07-18 14:19:36.646544532 +0530
 @@ -0,0 +1,77 @@
 +// ZstdEncoder.h
 +// (C) 2016 Rich Geldreich, Tino Reichardt
@@ -23863,7 +24038,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdEncoder.h p7zip_16.02/CPP/7zip
 +#endif
 diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdRegister.cpp p7zip_16.02/CPP/7zip/Compress/ZstdRegister.cpp
 --- p7zip_16.02-stock/CPP/7zip/Compress/ZstdRegister.cpp	1970-01-01 05:30:00.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/Compress/ZstdRegister.cpp	2016-07-18 13:58:30.592736579 +0530
++++ p7zip_16.02/CPP/7zip/Compress/ZstdRegister.cpp	2016-07-18 14:19:36.646544532 +0530
 @@ -0,0 +1,18 @@
 +// ZstdRegister.cpp
 +// (C) 2016 Rich Geldreich, Tino Reichardt
@@ -23885,7 +24060,7 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/Compress/ZstdRegister.cpp p7zip_16.02/CPP/7
 +  0x4F71101, "ZSTD")
 diff -ruN p7zip_16.02-stock/CPP/7zip/PREMAKE/premake4.lua p7zip_16.02/CPP/7zip/PREMAKE/premake4.lua
 --- p7zip_16.02-stock/CPP/7zip/PREMAKE/premake4.lua	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/PREMAKE/premake4.lua	2016-07-18 13:57:29.569999113 +0530
++++ p7zip_16.02/CPP/7zip/PREMAKE/premake4.lua	2016-07-19 16:45:02.415724007 +0530
 @@ -59,6 +59,19 @@
        "../../../../C/XzDec.c",
        "../../../../C/XzEnc.c",
@@ -23916,9 +24091,42 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/PREMAKE/premake4.lua p7zip_16.02/CPP/7zip/P
        "../../../../CPP/7zip/Crypto/7zAes.cpp",
        "../../../../CPP/7zip/Crypto/7zAesRegister.cpp",
        "../../../../CPP/7zip/Crypto/HmacSha1.cpp",
+diff -ruN p7zip_16.02-stock/CPP/7zip/QMAKE/7z_/7z_.pro p7zip_16.02/CPP/7zip/QMAKE/7z_/7z_.pro
+--- p7zip_16.02-stock/CPP/7zip/QMAKE/7z_/7z_.pro	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/QMAKE/7z_/7z_.pro	2016-07-19 16:45:02.411724089 +0530
+@@ -35,6 +35,19 @@
+   ../../../../C/Alloc.c \
+   ../../../../C/CpuArch.c \
+   ../../../../C/Threads.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+   ../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp \
+   ../../../../CPP/7zip/Common/CreateCoder.cpp \
+   ../../../../CPP/7zip/Common/FilePathAutoRename.cpp \
+@@ -48,6 +61,9 @@
+   ../../../../CPP/7zip/Common/StreamUtils.cpp \
+   ../../../../CPP/7zip/Common/UniqBlocks.cpp \
+   ../../../../CPP/7zip/Compress/CopyCoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
 diff -ruN p7zip_16.02-stock/CPP/7zip/QMAKE/7za/7za.pro p7zip_16.02/CPP/7zip/QMAKE/7za/7za.pro
 --- p7zip_16.02-stock/CPP/7zip/QMAKE/7za/7za.pro	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/7zip/QMAKE/7za/7za.pro	2016-07-18 13:57:29.553999445 +0530
++++ p7zip_16.02/CPP/7zip/QMAKE/7za/7za.pro	2016-07-19 16:45:02.411724089 +0530
 @@ -66,6 +66,19 @@
    ../../../../C/XzDec.c \
    ../../../../C/XzEnc.c \
@@ -23949,9 +24157,184 @@ diff -ruN p7zip_16.02-stock/CPP/7zip/QMAKE/7za/7za.pro p7zip_16.02/CPP/7zip/QMAK
    ../../../../CPP/7zip/Crypto/7zAes.cpp \
    ../../../../CPP/7zip/Crypto/7zAesRegister.cpp \
    ../../../../CPP/7zip/Crypto/HmacSha1.cpp \
+diff -ruN p7zip_16.02-stock/CPP/7zip/QMAKE/Format7zFree/Format7zFree.pro p7zip_16.02/CPP/7zip/QMAKE/Format7zFree/Format7zFree.pro
+--- p7zip_16.02-stock/CPP/7zip/QMAKE/Format7zFree/Format7zFree.pro	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/QMAKE/Format7zFree/Format7zFree.pro	2016-07-19 16:45:02.415724007 +0530
+@@ -68,6 +68,19 @@
+   ../../../../C/XzDec.c \
+   ../../../../C/XzEnc.c \
+   ../../../../C/XzIn.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+   ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp \
+   ../../../../CPP/7zip/Archive/7z/7zDecode.cpp \
+   ../../../../CPP/7zip/Archive/7z/7zEncode.cpp \
+@@ -233,6 +246,9 @@
+   ../../../../CPP/7zip/Compress/XpressDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/Crypto/7zAes.cpp \
+   ../../../../CPP/7zip/Crypto/7zAesRegister.cpp \
+   ../../../../CPP/7zip/Crypto/HmacSha1.cpp \
+diff -ruN p7zip_16.02-stock/CPP/7zip/UI/Console/makefile.list p7zip_16.02/CPP/7zip/UI/Console/makefile.list
+--- p7zip_16.02-stock/CPP/7zip/UI/Console/makefile.list	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/7zip/UI/Console/makefile.list	2016-07-19 16:45:02.407724171 +0530
+@@ -31,6 +31,9 @@
+   ../../../../CPP/7zip/Common/StreamUtils.cpp \
+   ../../../../CPP/7zip/Common/UniqBlocks.cpp \
+   ../../../../CPP/7zip/Compress/CopyCoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
+@@ -96,6 +99,19 @@
+   ../../../../C/Alloc.c \
+   ../../../../C/CpuArch.c \
+   ../../../../C/Threads.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+ 
+ StdAfx.h.gch : ../../../myWindows/StdAfx.h
+ 	rm -f StdAfx.h.gch
+@@ -110,6 +126,32 @@
+ 	$(CC) $(CFLAGS) ../../../../C/CpuArch.c
+ Threads.o : ../../../../C/Threads.c
+ 	$(CC) $(CFLAGS) ../../../../C/Threads.c
++entropy_common.o : ../../../../C/ZStd/entropy_common.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
++fse_compress.o : ../../../../C/ZStd/fse_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
++fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_decompress.c
++huf_compress.o : ../../../../C/ZStd/huf_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_compress.c
++huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
++xxhash.o : ../../../../C/ZStd/xxhash.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
++zbuff_compress.o : ../../../../C/ZStd/zbuff_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_compress.c
++zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
++zstd_common.o : ../../../../C/ZStd/zstd_common.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
++zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
++zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
++zstd_v05.o : ../../../../C/ZStd/zstd_v05.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v05.c
++zstd_v06.o : ../../../../C/ZStd/zstd_v06.c
++	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v06.c
+ OutStreamWithCRC.o : ../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
+ CreateCoder.o : ../../../../CPP/7zip/Common/CreateCoder.cpp
+@@ -136,6 +178,12 @@
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Common/UniqBlocks.cpp
+ CopyCoder.o : ../../../../CPP/7zip/Compress/CopyCoder.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/CopyCoder.cpp
++ZstdDecoder.o : ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
++ZstdEncoder.o : ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
++ZstdRegister.o : ../../../../CPP/7zip/Compress/ZstdRegister.cpp
++	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdRegister.cpp
+ ArchiveCommandLine.o : ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
+ 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
+ ArchiveExtractCallback.o : ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp
+@@ -259,6 +307,19 @@
+  Alloc.o \
+  CpuArch.o \
+  Threads.o \
++ entropy_common.o \
++ fse_compress.o \
++ fse_decompress.o \
++ huf_compress.o \
++ huf_decompress.o \
++ xxhash.o \
++ zbuff_compress.o \
++ zbuff_decompress.o \
++ zstd_common.o \
++ zstd_compress.o \
++ zstd_decompress.o \
++ zstd_v05.o \
++ zstd_v06.o \
+  OutStreamWithCRC.o \
+  CreateCoder.o \
+  FilePathAutoRename.o \
+@@ -272,6 +333,9 @@
+  StreamUtils.o \
+  UniqBlocks.o \
+  CopyCoder.o \
++ ZstdDecoder.o \
++ ZstdEncoder.o \
++ ZstdRegister.o \
+  ArchiveCommandLine.o \
+  ArchiveExtractCallback.o \
+  ArchiveOpenCallback.o \
+diff -ruN p7zip_16.02-stock/CPP/ANDROID/7z/jni/Android.mk p7zip_16.02/CPP/ANDROID/7z/jni/Android.mk
+--- p7zip_16.02-stock/CPP/ANDROID/7z/jni/Android.mk	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/ANDROID/7z/jni/Android.mk	2016-07-19 16:45:02.415724007 +0530
+@@ -35,6 +35,9 @@
+   ../../../../CPP/7zip/Common/StreamUtils.cpp \
+   ../../../../CPP/7zip/Common/UniqBlocks.cpp \
+   ../../../../CPP/7zip/Compress/CopyCoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
+   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
+@@ -98,6 +101,19 @@
+   ../../../../C/Alloc.c \
+   ../../../../C/CpuArch.c \
+   ../../../../C/Threads.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+ 
+ # Needed since ANDROID 5, these programs run on android-16 (Android 4.1+)
+ LOCAL_CFLAGS += -fPIE
 diff -ruN p7zip_16.02-stock/CPP/ANDROID/7za/jni/Android.mk p7zip_16.02/CPP/ANDROID/7za/jni/Android.mk
 --- p7zip_16.02-stock/CPP/ANDROID/7za/jni/Android.mk	2016-03-10 12:57:16.000000000 +0530
-+++ p7zip_16.02/CPP/ANDROID/7za/jni/Android.mk	2016-07-18 13:57:29.633997790 +0530
++++ p7zip_16.02/CPP/ANDROID/7za/jni/Android.mk	2016-07-19 16:45:02.415724007 +0530
 @@ -147,6 +147,9 @@
    ../../../../CPP/7zip/Compress/QuantumDecoder.cpp \
    ../../../../CPP/7zip/Compress/ShrinkDecoder.cpp \
@@ -23982,9 +24365,42 @@ diff -ruN p7zip_16.02-stock/CPP/ANDROID/7za/jni/Android.mk p7zip_16.02/CPP/ANDRO
  
  # Needed since ANDROID 5, these programs run on android-16 (Android 4.1+)
  LOCAL_CFLAGS += -fPIE
+diff -ruN p7zip_16.02-stock/CPP/ANDROID/Format7zFree/jni/Android.mk p7zip_16.02/CPP/ANDROID/Format7zFree/jni/Android.mk
+--- p7zip_16.02-stock/CPP/ANDROID/Format7zFree/jni/Android.mk	2016-03-10 12:57:16.000000000 +0530
++++ p7zip_16.02/CPP/ANDROID/Format7zFree/jni/Android.mk	2016-07-19 16:45:02.415724007 +0530
+@@ -187,6 +187,9 @@
+   ../../../../CPP/7zip/Compress/XpressDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibDecoder.cpp \
+   ../../../../CPP/7zip/Compress/ZlibEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
++  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
+   ../../../../CPP/7zip/Crypto/7zAes.cpp \
+   ../../../../CPP/7zip/Crypto/7zAesRegister.cpp \
+   ../../../../CPP/7zip/Crypto/HmacSha1.cpp \
+@@ -267,6 +270,19 @@
+   ../../../../C/XzDec.c \
+   ../../../../C/XzEnc.c \
+   ../../../../C/XzIn.c \
++  ../../../../C/ZStd/entropy_common.c \
++  ../../../../C/ZStd/fse_compress.c \
++  ../../../../C/ZStd/fse_decompress.c \
++  ../../../../C/ZStd/huf_compress.c \
++  ../../../../C/ZStd/huf_decompress.c \
++  ../../../../C/ZStd/xxhash.c \
++  ../../../../C/ZStd/zbuff_compress.c \
++  ../../../../C/ZStd/zbuff_decompress.c \
++  ../../../../C/ZStd/zstd_common.c \
++  ../../../../C/ZStd/zstd_compress.c \
++  ../../../../C/ZStd/zstd_decompress.c \
++  ../../../../C/ZStd/zstd_v05.c \
++  ../../../../C/ZStd/zstd_v06.c \
+ 
+ include $(BUILD_SHARED_LIBRARY)
+ 
 diff -ruN p7zip_16.02-stock/Utils/file_7za.py p7zip_16.02/Utils/file_7za.py
 --- p7zip_16.02-stock/Utils/file_7za.py	2015-11-06 21:40:32.000000000 +0530
-+++ p7zip_16.02/Utils/file_7za.py	2016-07-18 13:54:28.841738815 +0530
++++ p7zip_16.02/Utils/file_7za.py	2016-07-18 14:19:36.646544532 +0530
 @@ -37,6 +37,19 @@
   'C/XzDec.c',
   'C/XzEnc.c',
@@ -24017,7 +24433,7 @@ diff -ruN p7zip_16.02-stock/Utils/file_7za.py p7zip_16.02/Utils/file_7za.py
   'CPP/7zip/Crypto/HmacSha1.cpp',
 diff -ruN p7zip_16.02-stock/Utils/file_7zCon_sfx.py p7zip_16.02/Utils/file_7zCon_sfx.py
 --- p7zip_16.02-stock/Utils/file_7zCon_sfx.py	2015-11-06 21:40:22.000000000 +0530
-+++ p7zip_16.02/Utils/file_7zCon_sfx.py	2016-07-18 13:57:12.446353408 +0530
++++ p7zip_16.02/Utils/file_7zCon_sfx.py	2016-07-18 14:19:36.646544532 +0530
 @@ -16,6 +16,13 @@
   'C/Ppmd7Dec.c',
   'C/Sha256.c',
@@ -24041,3 +24457,69 @@ diff -ruN p7zip_16.02-stock/Utils/file_7zCon_sfx.py p7zip_16.02/Utils/file_7zCon
   'CPP/7zip/Crypto/7zAes.cpp',
   'CPP/7zip/Crypto/7zAesRegister.cpp',
   'CPP/7zip/Crypto/MyAes.cpp',
+diff -ruN p7zip_16.02-stock/Utils/file_7z.py p7zip_16.02/Utils/file_7z.py
+--- p7zip_16.02-stock/Utils/file_7z.py	2014-12-30 22:14:30.000000000 +0530
++++ p7zip_16.02/Utils/file_7z.py	2016-07-19 16:42:26.326907782 +0530
+@@ -5,6 +5,19 @@
+  'C/Alloc.c',
+  'C/CpuArch.c',
+  'C/Threads.c',
++ 'C/ZStd/entropy_common.c',
++ 'C/ZStd/fse_compress.c',
++ 'C/ZStd/fse_decompress.c',
++ 'C/ZStd/huf_compress.c',
++ 'C/ZStd/huf_decompress.c',
++ 'C/ZStd/xxhash.c',
++ 'C/ZStd/zbuff_compress.c',
++ 'C/ZStd/zbuff_decompress.c',
++ 'C/ZStd/zstd_common.c',
++ 'C/ZStd/zstd_compress.c',
++ 'C/ZStd/zstd_decompress.c',
++ 'C/ZStd/zstd_v05.c',
++ 'C/ZStd/zstd_v06.c',
+ ]
+ 
+ files_cpp=[
+@@ -21,6 +34,9 @@
+  'CPP/7zip/Common/StreamUtils.cpp',
+  'CPP/7zip/Common/UniqBlocks.cpp',
+  'CPP/7zip/Compress/CopyCoder.cpp',
++ 'CPP/7zip/Compress/ZstdDecoder.cpp',
++ 'CPP/7zip/Compress/ZstdEncoder.cpp',
++ 'CPP/7zip/Compress/ZstdRegister.cpp',
+  'CPP/7zip/UI/Common/ArchiveCommandLine.cpp',
+  'CPP/7zip/UI/Common/ArchiveExtractCallback.cpp',
+  'CPP/7zip/UI/Common/ArchiveOpenCallback.cpp',
+diff -ruN p7zip_16.02-stock/Utils/file_7z_so.py p7zip_16.02/Utils/file_7z_so.py
+--- p7zip_16.02-stock/Utils/file_7z_so.py	2015-11-06 21:40:10.000000000 +0530
++++ p7zip_16.02/Utils/file_7z_so.py	2016-07-19 16:44:55.107873087 +0530
+@@ -39,6 +39,19 @@
+  'C/XzDec.c',
+  'C/XzEnc.c',
+  'C/XzIn.c',
++ 'C/ZStd/entropy_common.c',
++ 'C/ZStd/fse_compress.c',
++ 'C/ZStd/fse_decompress.c',
++ 'C/ZStd/huf_compress.c',
++ 'C/ZStd/huf_decompress.c',
++ 'C/ZStd/xxhash.c',
++ 'C/ZStd/zbuff_compress.c',
++ 'C/ZStd/zbuff_decompress.c',
++ 'C/ZStd/zstd_common.c',
++ 'C/ZStd/zstd_compress.c',
++ 'C/ZStd/zstd_decompress.c',
++ 'C/ZStd/zstd_v05.c',
++ 'C/ZStd/zstd_v06.c',
+ ]
+ 
+ files_cpp=[
+@@ -207,6 +220,9 @@
+  'CPP/7zip/Compress/XpressDecoder.cpp',
+  'CPP/7zip/Compress/ZlibDecoder.cpp',
+  'CPP/7zip/Compress/ZlibEncoder.cpp',
++ 'CPP/7zip/Compress/ZstdDecoder.cpp',
++ 'CPP/7zip/Compress/ZstdEncoder.cpp',
++ 'CPP/7zip/Compress/ZstdRegister.cpp',
+  'CPP/7zip/Crypto/7zAes.cpp',
+  'CPP/7zip/Crypto/7zAesRegister.cpp',
+  'CPP/7zip/Crypto/HmacSha1.cpp',
