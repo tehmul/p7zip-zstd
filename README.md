@@ -6,20 +6,21 @@ p7zip with ZStandard support.
 ### Easy way
 
 Read makefile.common to see available make targets. If you're in a hurry:
-- Download https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_15.14.1_zstd_src_all.tar.bz2
-- Extract: ```tar jxvf p7zip_15.14.1_zstd_src_all.tar.bz2``` 
+- Download https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.7.4.tar.bz2
+- Extract: ```tar jxvf p7zip_16.02_zstd_0.7.4.tar.bz2``` 
 - Compile:
 ```sh
 make all4
 sudo make install
 ```
 
-### Patching the original p7zip_15.14.1 source
+### Patching the original p7zip_16.02 source
 
-If you'd already have the original p7zip_15.14.1 source from sourceforge, download  https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_15.14.1_ZStd.diff
-and apply the patch using:
+If you'd already have the original p7zip_16.02 source from sourceforge, download  https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.7.4.diff
+and apply the patch:
 ```sh
-patch -p0 <p7zip_15.14.1_ZStd.diff
+tar jxvf p7zip_16.02_src_all.tar.bz2
+patch -p0 <p7zip_16.02_zstd_0.7.4.diff
 ```
 ## Usage
 
@@ -51,5 +52,5 @@ Ultra mode, bcj processing
 
 ## References:
 - Original sources for Zstd: https://github.com/Cyan4973/zstd
-- Original sources for the 7-zip Zstd plugin: https://mcmilk.de/projects/7-Zip-ZStd/
+- Original sources for the 7-zip Zstd plugin: https://mcmilk.de/projects/7-Zip-ZStd/, https://github.com/mcmilk/7-Zip-Zstd
 - Original p7zip sources: http://p7zip.sourceforge.net/
