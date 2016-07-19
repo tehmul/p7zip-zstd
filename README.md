@@ -10,7 +10,7 @@ Read makefile.common to see available make targets. If you're in a hurry:
 - Extract: ```tar jxvf p7zip_16.02_zstd_0.7.4.tar.bz2``` 
 - Compile:
 ```sh
-make all4
+make all3 all4
 sudo make install
 ```
 
