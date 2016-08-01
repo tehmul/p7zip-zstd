@@ -6,8 +6,8 @@ p7zip with ZStandard support.
 ### Easy way
 
 Read makefile.common to see available make targets. If you're in a hurry:
-- Download https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.7.4.tar.bz2
-- Extract: ```tar jxvf p7zip_16.02_zstd_0.7.4.tar.bz2``` 
+- Download https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.8.0.tar.bz2
+- Extract: ```tar jxvf p7zip_16.02_zstd_0.8.0.tar.bz2``` 
 - Compile:
 ```sh
 make all3 all4
@@ -16,11 +16,11 @@ sudo make install
 
 ### Patching the original p7zip_16.02 source
 
-If you'd already have the original p7zip_16.02 source from sourceforge, download  https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.7.4.diff
+If you'd already have the original p7zip_16.02 source from sourceforge, download  https://github.com/tehmul/p7zip-zstd/blob/master/p7zip_16.02_zstd_0.8.0.diff
 and apply the patch:
 ```sh
 tar jxvf p7zip_16.02_src_all.tar.bz2
-patch -p0 <p7zip_16.02_zstd_0.7.4.diff
+patch -p0 <p7zip_16.02_zstd_0.8.0.diff
 ```
 ## Usage
 
