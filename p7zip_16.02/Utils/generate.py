@@ -283,6 +283,7 @@ import file_7zFM
 import file_7z_so
 import file_Codecs_Rar_so
 import file_Codecs_Lzham_so
+import file_Codecs_zstd_so
 import file_LzmaCon
 import file_Client7z
 import file_P7ZIP
