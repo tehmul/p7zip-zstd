@@ -66,8 +66,6 @@ add_executable(7za
   "../../../../C/ZStd/zstd_common.c"
   "../../../../C/ZStd/zstd_compress.c"
   "../../../../C/ZStd/zstd_decompress.c"
-  "../../../../C/ZStd/zstd_v05.c"
-  "../../../../C/ZStd/zstd_v06.c"
   "../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp"
   "../../../../CPP/7zip/Archive/7z/7zDecode.cpp"
   "../../../../CPP/7zip/Archive/7z/7zEncode.cpp"

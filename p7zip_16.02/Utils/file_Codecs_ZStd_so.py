@@ -1,0 +1,27 @@
+files_c=[
+ 'C/Alloc.c',
+ 'C/ZStd/entropy_common.c',
+ 'C/ZStd/fse_compress.c',
+ 'C/ZStd/fse_decompress.c',
+ 'C/ZStd/huf_compress.c',
+ 'C/ZStd/huf_decompress.c',
+ 'C/ZStd/xxhash.c',
+ 'C/ZStd/zbuff_compress.c',
+ 'C/ZStd/zbuff_decompress.c',
+ 'C/ZStd/zstd_common.c',
+ 'C/ZStd/zstd_compress.c',
+ 'C/ZStd/zstd_decompress.c',
+ 'C/ZStd/zstd_v05.c',
+ 'C/ZStd/zstd_v06.c',
+ 'C/ZStd/zstd_v07.c',
+]
+
+files_cpp=[
+ 'CPP/7zip/Common/StreamUtils.cpp',
+ 'CPP/7zip/Compress/CodecExports.cpp',
+ 'CPP/7zip/Compress/DllExportsCompress.cpp',
+ 'CPP/7zip/Compress/ZstdDecoder.cpp',
+ 'CPP/7zip/Compress/ZstdEncoder.cpp',
+ 'CPP/7zip/Compress/ZstdRegister.cpp',
+ 'CPP/Common/MyWindows.cpp',
+]

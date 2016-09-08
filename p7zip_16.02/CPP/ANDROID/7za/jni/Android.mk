@@ -269,8 +269,6 @@ LOCAL_SRC_FILES := \
   ../../../../C/ZStd/zstd_common.c \
   ../../../../C/ZStd/zstd_compress.c \
   ../../../../C/ZStd/zstd_decompress.c \
-  ../../../../C/ZStd/zstd_v05.c \
-  ../../../../C/ZStd/zstd_v06.c \
 
 # Needed since ANDROID 5, these programs run on android-16 (Android 4.1+)
 LOCAL_CFLAGS += -fPIE

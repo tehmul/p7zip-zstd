@@ -68,19 +68,6 @@ SOURCES +=  \
   ../../../../C/XzDec.c \
   ../../../../C/XzEnc.c \
   ../../../../C/XzIn.c \
-  ../../../../C/ZStd/entropy_common.c \
-  ../../../../C/ZStd/fse_compress.c \
-  ../../../../C/ZStd/fse_decompress.c \
-  ../../../../C/ZStd/huf_compress.c \
-  ../../../../C/ZStd/huf_decompress.c \
-  ../../../../C/ZStd/xxhash.c \
-  ../../../../C/ZStd/zbuff_compress.c \
-  ../../../../C/ZStd/zbuff_decompress.c \
-  ../../../../C/ZStd/zstd_common.c \
-  ../../../../C/ZStd/zstd_compress.c \
-  ../../../../C/ZStd/zstd_decompress.c \
-  ../../../../C/ZStd/zstd_v05.c \
-  ../../../../C/ZStd/zstd_v06.c \
   ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp \
   ../../../../CPP/7zip/Archive/7z/7zDecode.cpp \
   ../../../../CPP/7zip/Archive/7z/7zEncode.cpp \
@@ -246,9 +233,6 @@ SOURCES +=  \
   ../../../../CPP/7zip/Compress/XpressDecoder.cpp \
   ../../../../CPP/7zip/Compress/ZlibDecoder.cpp \
   ../../../../CPP/7zip/Compress/ZlibEncoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
   ../../../../CPP/7zip/Crypto/7zAes.cpp \
   ../../../../CPP/7zip/Crypto/7zAesRegister.cpp \
   ../../../../CPP/7zip/Crypto/HmacSha1.cpp \

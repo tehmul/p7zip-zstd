@@ -78,6 +78,9 @@ SRCS=\
   ../../../../CPP/7zip/Compress/LzmaDecoder.cpp \
   ../../../../CPP/7zip/Compress/LzmaEncoder.cpp \
   ../../../../CPP/7zip/Compress/LzmaRegister.cpp \
+  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
+  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
+  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
@@ -167,6 +170,17 @@ SRCS_C=\
   ../../../../C/XzDec.c \
   ../../../../C/XzEnc.c \
   ../../../../C/XzIn.c \
+  ../../../../C/ZStd/entropy_common.c \
+  ../../../../C/ZStd/fse_compress.c \
+  ../../../../C/ZStd/fse_decompress.c \
+  ../../../../C/ZStd/huf_compress.c \
+  ../../../../C/ZStd/huf_decompress.c \
+  ../../../../C/ZStd/xxhash.c \
+  ../../../../C/ZStd/zbuff_compress.c \
+  ../../../../C/ZStd/zbuff_decompress.c \
+  ../../../../C/ZStd/zstd_common.c \
+  ../../../../C/ZStd/zstd_compress.c \
+  ../../../../C/ZStd/zstd_decompress.c \
 
 StdAfx.h.gch : ../../../myWindows/StdAfx.h
 	rm -f StdAfx.h.gch
@@ -223,6 +237,28 @@ XzEnc.o : ../../../../C/XzEnc.c
 	$(CC) $(CFLAGS) ../../../../C/XzEnc.c
 XzIn.o : ../../../../C/XzIn.c
 	$(CC) $(CFLAGS) ../../../../C/XzIn.c
+entropy_common.o : ../../../../C/ZStd/entropy_common.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
+fse_compress.o : ../../../../C/ZStd/fse_compress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
+fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_decompress.c
+huf_compress.o : ../../../../C/ZStd/huf_compress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_compress.c
+huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
+xxhash.o : ../../../../C/ZStd/xxhash.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
+zbuff_compress.o : ../../../../C/ZStd/zbuff_compress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_compress.c
+zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
+zstd_common.o : ../../../../C/ZStd/zstd_common.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
+zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
+zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
 7zCompressionMode.o : ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 7zDecode.o : ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
@@ -343,6 +379,12 @@ LzmaEncoder.o : ../../../../CPP/7zip/Compress/LzmaEncoder.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/LzmaEncoder.cpp
 LzmaRegister.o : ../../../../CPP/7zip/Compress/LzmaRegister.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/LzmaRegister.cpp
+ZstdDecoder.o : ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
+ZstdEncoder.o : ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
+ZstdRegister.o : ../../../../CPP/7zip/Compress/ZstdRegister.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdRegister.cpp
 ArchiveCommandLine.o : ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
 ArchiveExtractCallback.o : ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp
@@ -493,6 +535,17 @@ OBJS=\
  XzDec.o \
  XzEnc.o \
  XzIn.o \
+ entropy_common.o \
+ fse_compress.o \
+ fse_decompress.o \
+ huf_compress.o \
+ huf_decompress.o \
+ xxhash.o \
+ zbuff_compress.o \
+ zbuff_decompress.o \
+ zstd_common.o \
+ zstd_compress.o \
+ zstd_decompress.o \
  7zCompressionMode.o \
  7zDecode.o \
  7zEncode.o \
@@ -553,6 +606,9 @@ OBJS=\
  LzmaDecoder.o \
  LzmaEncoder.o \
  LzmaRegister.o \
+ ZstdDecoder.o \
+ ZstdEncoder.o \
+ ZstdRegister.o \
  ArchiveCommandLine.o \
  ArchiveExtractCallback.o \
  ArchiveOpenCallback.o \

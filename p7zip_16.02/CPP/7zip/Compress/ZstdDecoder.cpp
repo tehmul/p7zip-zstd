@@ -249,6 +249,7 @@ STDMETHODIMP CDecoder::Code (ISequentialInStream * inStream,
 void *CDecoder::ZB_createDCtx(void)
 {
   PRF(fprintf(stderr, "zstdcodec: ZB_createDCtx(v=%d)\n", _props._ver_minor));
+#if 0
 #ifndef EXTRACT_ONLY
   switch (_props._ver_minor) {
   case 5:
@@ -259,12 +260,14 @@ void *CDecoder::ZB_createDCtx(void)
     break;
   }
 #endif
+#endif
   return (void*)ZBUFF_createDCtx();
 }
 
 size_t CDecoder::ZB_freeDCtx(void *dctx)
 {
   PRF(fprintf(stderr, "zstdcodec: ZB_freeDCtx(v=%d)\n", _props._ver_minor));
+#if 0
 #ifndef EXTRACT_ONLY
   switch (_props._ver_minor) {
   case 5:
@@ -275,12 +278,14 @@ size_t CDecoder::ZB_freeDCtx(void *dctx)
     break;
   }
 #endif
+#endif
   return ZBUFF_freeDCtx((ZBUFF_DCtx *)dctx);
 }
 
 size_t CDecoder::ZB_decompressInit(void *dctx)
 {
   PRF(fprintf(stderr, "zstdcodec: ZB_decompressInit(v=%d)\n", _props._ver_minor));
+#if 0
 #ifndef EXTRACT_ONLY
   switch (_props._ver_minor) {
   case 5:
@@ -291,12 +296,14 @@ size_t CDecoder::ZB_decompressInit(void *dctx)
     break;
   }
 #endif
+#endif
   return ZBUFF_decompressInit((ZBUFF_DCtx *)dctx);
 }
 
 size_t CDecoder::ZB_decompressContinue(void *dctx, void* dst, size_t *dstCapacityPtr, const void* src, size_t *srcSizePtr)
 {
   PRF(fprintf(stderr, "zstdcodec: ZB_decompressContinue(v=%d)\n", _props._ver_minor));
+#if 0
 #ifndef EXTRACT_ONLY
   switch (_props._ver_minor) {
   case 5:
@@ -306,6 +313,7 @@ size_t CDecoder::ZB_decompressContinue(void *dctx, void* dst, size_t *dstCapacit
     return ZBUFFv06_decompressContinue((ZBUFFv06_DCtx *)dctx, dst, dstCapacityPtr, src, srcSizePtr);
     break;
   }
+#endif
 #endif
   return ZBUFF_decompressContinue((ZBUFF_DCtx *)dctx, dst, dstCapacityPtr, src, srcSizePtr);
 }

@@ -31,9 +31,6 @@ SRCS=\
   ../../../../CPP/7zip/Common/StreamUtils.cpp \
   ../../../../CPP/7zip/Common/UniqBlocks.cpp \
   ../../../../CPP/7zip/Compress/CopyCoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
-  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
@@ -99,19 +96,6 @@ SRCS_C=\
   ../../../../C/Alloc.c \
   ../../../../C/CpuArch.c \
   ../../../../C/Threads.c \
-  ../../../../C/ZStd/entropy_common.c \
-  ../../../../C/ZStd/fse_compress.c \
-  ../../../../C/ZStd/fse_decompress.c \
-  ../../../../C/ZStd/huf_compress.c \
-  ../../../../C/ZStd/huf_decompress.c \
-  ../../../../C/ZStd/xxhash.c \
-  ../../../../C/ZStd/zbuff_compress.c \
-  ../../../../C/ZStd/zbuff_decompress.c \
-  ../../../../C/ZStd/zstd_common.c \
-  ../../../../C/ZStd/zstd_compress.c \
-  ../../../../C/ZStd/zstd_decompress.c \
-  ../../../../C/ZStd/zstd_v05.c \
-  ../../../../C/ZStd/zstd_v06.c \
 
 StdAfx.h.gch : ../../../myWindows/StdAfx.h
 	rm -f StdAfx.h.gch
@@ -126,32 +110,6 @@ CpuArch.o : ../../../../C/CpuArch.c
 	$(CC) $(CFLAGS) ../../../../C/CpuArch.c
 Threads.o : ../../../../C/Threads.c
 	$(CC) $(CFLAGS) ../../../../C/Threads.c
-entropy_common.o : ../../../../C/ZStd/entropy_common.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
-fse_compress.o : ../../../../C/ZStd/fse_compress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
-fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_decompress.c
-huf_compress.o : ../../../../C/ZStd/huf_compress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_compress.c
-huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
-xxhash.o : ../../../../C/ZStd/xxhash.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
-zbuff_compress.o : ../../../../C/ZStd/zbuff_compress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_compress.c
-zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
-zstd_common.o : ../../../../C/ZStd/zstd_common.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
-zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
-zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
-zstd_v05.o : ../../../../C/ZStd/zstd_v05.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v05.c
-zstd_v06.o : ../../../../C/ZStd/zstd_v06.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v06.c
 OutStreamWithCRC.o : ../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
 CreateCoder.o : ../../../../CPP/7zip/Common/CreateCoder.cpp
@@ -178,12 +136,6 @@ UniqBlocks.o : ../../../../CPP/7zip/Common/UniqBlocks.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Common/UniqBlocks.cpp
 CopyCoder.o : ../../../../CPP/7zip/Compress/CopyCoder.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/CopyCoder.cpp
-ZstdDecoder.o : ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
-	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdDecoder.cpp
-ZstdEncoder.o : ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
-	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdEncoder.cpp
-ZstdRegister.o : ../../../../CPP/7zip/Compress/ZstdRegister.cpp
-	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdRegister.cpp
 ArchiveCommandLine.o : ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp
 ArchiveExtractCallback.o : ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp
@@ -307,19 +259,6 @@ OBJS=\
  Alloc.o \
  CpuArch.o \
  Threads.o \
- entropy_common.o \
- fse_compress.o \
- fse_decompress.o \
- huf_compress.o \
- huf_decompress.o \
- xxhash.o \
- zbuff_compress.o \
- zbuff_decompress.o \
- zstd_common.o \
- zstd_compress.o \
- zstd_decompress.o \
- zstd_v05.o \
- zstd_v06.o \
  OutStreamWithCRC.o \
  CreateCoder.o \
  FilePathAutoRename.o \
@@ -333,9 +272,6 @@ OBJS=\
  StreamUtils.o \
  UniqBlocks.o \
  CopyCoder.o \
- ZstdDecoder.o \
- ZstdEncoder.o \
- ZstdRegister.o \
  ArchiveCommandLine.o \
  ArchiveExtractCallback.o \
  ArchiveOpenCallback.o \

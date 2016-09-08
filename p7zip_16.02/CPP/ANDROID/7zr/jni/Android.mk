@@ -98,6 +98,9 @@ LOCAL_SRC_FILES := \
   ../../../../CPP/7zip/Compress/LzmaDecoder.cpp \
   ../../../../CPP/7zip/Compress/LzmaEncoder.cpp \
   ../../../../CPP/7zip/Compress/LzmaRegister.cpp \
+  ../../../../CPP/7zip/Compress/ZstdDecoder.cpp \
+  ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
+  ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveCommandLine.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveExtractCallback.cpp \
   ../../../../CPP/7zip/UI/Common/ArchiveOpenCallback.cpp \
@@ -185,6 +188,17 @@ LOCAL_SRC_FILES := \
   ../../../../C/XzDec.c \
   ../../../../C/XzEnc.c \
   ../../../../C/XzIn.c \
+  ../../../../C/ZStd/entropy_common.c \
+  ../../../../C/ZStd/fse_compress.c \
+  ../../../../C/ZStd/fse_decompress.c \
+  ../../../../C/ZStd/huf_compress.c \
+  ../../../../C/ZStd/huf_decompress.c \
+  ../../../../C/ZStd/xxhash.c \
+  ../../../../C/ZStd/zbuff_compress.c \
+  ../../../../C/ZStd/zbuff_decompress.c \
+  ../../../../C/ZStd/zstd_common.c \
+  ../../../../C/ZStd/zstd_compress.c \
+  ../../../../C/ZStd/zstd_decompress.c \
 
 # Needed since ANDROID 5, these programs run on android-16 (Android 4.1+)
 LOCAL_CFLAGS += -fPIE
