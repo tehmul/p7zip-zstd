@@ -1,34 +1,12 @@
-/*
-    zstd_v05 - decoder for 0.5 format
-    Header File
-    Copyright (C) 2014-2016, Yann Collet.
+/**
+ * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
 
-    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
-
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions are
-    met:
-    * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
-    copyright notice, this list of conditions and the following disclaimer
-    in the documentation and/or other materials provided with the
-    distribution.
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-    OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-    You can contact the author at :
-    - zstd source repository : https://github.com/Cyan4973/zstd
-*/
 #ifndef ZSTDv05_H
 #define ZSTDv05_H
 
@@ -40,7 +18,7 @@ extern "C" {
 *  Dependencies
 ***************************************/
 #include <stddef.h>   /* size_t */
-
+#include "mem.h"      /* U64, U32 */
 
 
 /* *************************************
@@ -69,7 +47,7 @@ const char* ZSTDv05_getErrorName(size_t code);     /*!< provides readable string
 /** Decompression context */
 typedef struct ZSTDv05_DCtx_s ZSTDv05_DCtx;
 ZSTDv05_DCtx* ZSTDv05_createDCtx(void);
-size_t     ZSTDv05_freeDCtx(ZSTDv05_DCtx* dctx);      /*!< @return : errorCode */
+size_t ZSTDv05_freeDCtx(ZSTDv05_DCtx* dctx);      /*!< @return : errorCode */
 
 /** ZSTDv05_decompressDCtx() :
 *   Same as ZSTDv05_decompress(), but requires an already allocated ZSTDv05_DCtx (see ZSTDv05_createDCtx()) */
@@ -77,25 +55,40 @@ size_t ZSTDv05_decompressDCtx(ZSTDv05_DCtx* ctx, void* dst, size_t dstCapacity, 
 
 
 /*-***********************
-*  Dictionary API
+*  Simple Dictionary API
 *************************/
 /*! ZSTDv05_decompress_usingDict() :
 *   Decompression using a pre-defined Dictionary content (see dictBuilder).
 *   Dictionary must be identical to the one used during compression, otherwise regenerated data will be corrupted.
 *   Note : dict can be NULL, in which case, it's equivalent to ZSTDv05_decompressDCtx() */
 size_t ZSTDv05_decompress_usingDict(ZSTDv05_DCtx* dctx,
-                                             void* dst, size_t dstCapacity,
-                                       const void* src, size_t srcSize,
-                                       const void* dict,size_t dictSize);
+                                            void* dst, size_t dstCapacity,
+                                      const void* src, size_t srcSize,
+                                      const void* dict,size_t dictSize);
+
+/*-************************
+*  Advanced Streaming API
+***************************/
+typedef enum { ZSTDv05_fast, ZSTDv05_greedy, ZSTDv05_lazy, ZSTDv05_lazy2, ZSTDv05_btlazy2, ZSTDv05_opt, ZSTDv05_btopt } ZSTDv05_strategy;
+typedef struct {
+    U64 srcSize;
+    U32 windowLog;     /* the only useful information to retrieve */
+    U32 contentLog; U32 hashLog; U32 searchLog; U32 searchLength; U32 targetLength; ZSTDv05_strategy strategy;
+} ZSTDv05_parameters;
+size_t ZSTDv05_getFrameParams(ZSTDv05_parameters* params, const void* src, size_t srcSize);
+
+size_t ZSTDv05_decompressBegin_usingDict(ZSTDv05_DCtx* dctx, const void* dict, size_t dictSize);
+void   ZSTDv05_copyDCtx(ZSTDv05_DCtx* dstDCtx, const ZSTDv05_DCtx* srcDCtx);
+size_t ZSTDv05_nextSrcSizeToDecompress(ZSTDv05_DCtx* dctx);
+size_t ZSTDv05_decompressContinue(ZSTDv05_DCtx* dctx, void* dst, size_t dstCapacity, const void* src, size_t srcSize);
 
 
-
-
-
-
+/*-***********************
+*  ZBUFF API
+*************************/
 typedef struct ZBUFFv05_DCtx_s ZBUFFv05_DCtx;
 ZBUFFv05_DCtx* ZBUFFv05_createDCtx(void);
-size_t      ZBUFFv05_freeDCtx(ZBUFFv05_DCtx* dctx);
+size_t         ZBUFFv05_freeDCtx(ZBUFFv05_DCtx* dctx);
 
 size_t ZBUFFv05_decompressInit(ZBUFFv05_DCtx* dctx);
 size_t ZBUFFv05_decompressInitDictionary(ZBUFFv05_DCtx* dctx, const void* dict, size_t dictSize);
