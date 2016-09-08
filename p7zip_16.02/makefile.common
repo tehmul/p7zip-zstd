@@ -6,13 +6,13 @@ DEST_SHARE=$(DEST_HOME)/lib/p7zip
 DEST_SHARE_DOC=$(DEST_HOME)/share/doc/p7zip
 DEST_MAN=$(DEST_HOME)/man
 
-.PHONY: default all all2 7za 7zG 7zFM sfx 7z 7zr Client7z common common7z LangAndHelp tar_bin depend test test_7z test_7zr test_7zG test_Client7z LzmaCon test_LzmaCon  all_test app cppcheck lzham test_lib other
+.PHONY: default all all2 7za 7zG 7zFM sfx 7z 7zr Client7z common common7z LangAndHelp tar_bin depend test test_7z test_7zr test_7zG test_Client7z LzmaCon test_LzmaCon  all_test app cppcheck lzham ZStd test_lib other
 
 .PHONY: clean clean_full clean_C
 
 include makefile.machine
 
-default:7za
+default:7za 
 
 all:7za sfx
 
@@ -20,7 +20,7 @@ all2: all 7z
 
 all3: all2 7zr
 
-all4: all3 Client7z LzmaCon lzham test_lib
+all4: all3 Client7z LzmaCon lzham ZStd test_lib
 
 all4bis: all3 Client7z LzmaCon test_lib  # lzham not supported on x32 CPU.
 

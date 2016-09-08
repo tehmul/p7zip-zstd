@@ -250,8 +250,6 @@ SRCS_C=\
   ../../../../C/ZStd/zstd_common.c \
   ../../../../C/ZStd/zstd_compress.c \
   ../../../../C/ZStd/zstd_decompress.c \
-  ../../../../C/ZStd/zstd_v05.c \
-  ../../../../C/ZStd/zstd_v06.c \
 
 StdAfx.h.gch : ../../../myWindows/StdAfx.h
 	rm -f StdAfx.h.gch
@@ -352,10 +350,6 @@ zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
 zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
-zstd_v05.o : ../../../../C/ZStd/zstd_v05.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v05.c
-zstd_v06.o : ../../../../C/ZStd/zstd_v06.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_v06.c
 7zCompressionMode.o : ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 7zDecode.o : ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
@@ -772,8 +766,6 @@ OBJS=\
  zstd_common.o \
  zstd_compress.o \
  zstd_decompress.o \
- zstd_v05.o \
- zstd_v06.o \
  7zCompressionMode.o \
  7zDecode.o \
  7zEncode.o \

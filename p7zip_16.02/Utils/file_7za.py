@@ -48,8 +48,6 @@ files_c=[
  'C/ZStd/zstd_common.c',
  'C/ZStd/zstd_compress.c',
  'C/ZStd/zstd_decompress.c',
- 'C/ZStd/zstd_v05.c',
- 'C/ZStd/zstd_v06.c',
 ]
 
 files_cpp=[

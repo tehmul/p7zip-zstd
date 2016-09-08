@@ -32,6 +32,7 @@ depend:
 	$(MAKE) -C CPP/7zip/UI/Console            depend
 	$(MAKE) -C CPP/7zip/Bundles/Format7zFree  depend
 	$(MAKE) -C CPP/7zip/Compress/Rar          depend
+	$(MAKE) -C CPP/7zip/Compress/ZStd         depend
 	$(MAKE) -C CPP/7zip/UI/GUI                depend
 	$(MAKE) -C CPP/7zip/UI/FileManager        depend
 
@@ -43,10 +44,14 @@ common7z:common
 	$(MKDIR) bin/Codecs
 	$(MAKE) -C CPP/7zip/Bundles/Format7zFree all
 	$(MAKE) -C CPP/7zip/Compress/Rar         all
+	$(MAKE) -C CPP/7zip/Compress/ZStd        all
 
 lzham:common
 	$(MKDIR) bin/Codecs
 	$(MAKE) -C CPP/7zip/Compress/Lzham all
+ZStd:common
+	$(MKDIR) bin/Codecs
+	$(MAKE) -C CPP/7zip/Compress/ZStd  all
 
 7z: common7z
 	$(MAKE) -C CPP/7zip/UI/Console           all
@@ -69,6 +74,7 @@ clean_C:
 	$(MAKE) -C CPP/7zip/Bundles/Format7zFree clean
 	$(MAKE) -C CPP/7zip/Compress/Rar         clean
 	$(MAKE) -C CPP/7zip/Compress/Lzham       clean
+	$(MAKE) -C CPP/7zip/Compress/ZStd        clean
 	$(MAKE) -C CPP/7zip/Bundles/LzmaCon      clean2
 	$(MAKE) -C CPP/7zip/Bundles/AloneGCOV    clean
 	$(MAKE) -C CPP/7zip/TEST/TestUI          clean

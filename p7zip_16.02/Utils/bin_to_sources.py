@@ -16,6 +16,9 @@ file0='Utils/file_7z.py'
 dir0='CPP/7zip/Compress/Rar'
 file0='Utils/file_Codecs_Rar_so.py'
 
+dir0='CPP/7zip/Compress/ZStd'
+file0='Utils/file_Codecs_ZStd_so.py'
+
 dir0='CPP/7zip/Bundles/Format7zFree'
 file0='Utils/file_7z_so.py'
 
