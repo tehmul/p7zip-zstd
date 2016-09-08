@@ -3,14 +3,12 @@ p7zip with ZStandard support.
 
 ## Build instructions:
 
-### Easy way
-
-Read makefile.common to see available make targets. 
 - Compile:
 ```sh
 make all3 all4
 sudo make install
 ```
+(Read makefile.common to see available make targets.)
 
 ## Usage
 
