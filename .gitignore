@@ -1,2 +1,5 @@
 *.o
 *.pyc
+*.orig
+*.rej
+*.desktop

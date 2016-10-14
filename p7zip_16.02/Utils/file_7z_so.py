@@ -97,6 +97,7 @@ files_cpp=[
  'CPP/7zip/Archive/Iso/IsoHeader.cpp',
  'CPP/7zip/Archive/Iso/IsoIn.cpp',
  'CPP/7zip/Archive/Iso/IsoRegister.cpp',
+ 'CPP/7zip/Archive/LzHandler.cpp',
  'CPP/7zip/Archive/LzhHandler.cpp',
  'CPP/7zip/Archive/LzmaHandler.cpp',
  'CPP/7zip/Archive/MachoHandler.cpp',
