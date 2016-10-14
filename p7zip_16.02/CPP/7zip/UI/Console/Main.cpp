@@ -203,6 +203,7 @@ static void ShowCopyrightAndHelp(CStdOutStream *so, bool needHelp)
   // *so << "# CPUs: " << (UInt64)NWindows::NSystem::GetNumberOfProcessors() << endl;
 
   showP7zipInfo(so);
+  showZStdInfo(so);
  
 
   if (needHelp)

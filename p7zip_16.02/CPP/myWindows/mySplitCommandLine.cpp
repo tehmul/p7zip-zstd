@@ -8,6 +8,7 @@
 #include "Common/StdOutStream.h"
 #include "Common/IntToString.h"
 #include "../C/CpuArch.h"
+#include "../C/ZStd/zstd.h"
 
 #ifdef ENV_HAVE_LOCALE
 #include <locale.h>
@@ -213,5 +214,15 @@ void showP7zipInfo(CStdOutStream *so)
 }
 #endif
     *so << ")\n\n";
+
+}
+
+void showZStdInfo(CStdOutStream *so)
+{
+  if (!so)
+    return;
+
+  *so << "Zstandard Version: " << ZSTD_VERSION_STRING ;
+  *so << "\n\n";
 
 }
