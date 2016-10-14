@@ -82,6 +82,7 @@ files_cpp=[
  'CPP/7zip/Archive/Common/ParseProperties.cpp',
  'CPP/7zip/Archive/DeflateProps.cpp',
  'CPP/7zip/Archive/GzHandler.cpp',
+ 'CPP/7zip/Archive/LzHandler.cpp',
  'CPP/7zip/Archive/LzmaHandler.cpp',
  'CPP/7zip/Archive/PpmdHandler.cpp',
  'CPP/7zip/Archive/SplitHandler.cpp',

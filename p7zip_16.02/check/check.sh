@@ -122,6 +122,16 @@ sure ${P7ZIP} x 7za433_7zip_bzip2.7z
 sure diff -r 7za433_ref 7za433_7zip_bzip2
 
 echo ""
+echo "# EXTRACTING (LZIP) ..."
+echo "#######################"
+
+rm -f 7za.exe
+
+sure ${P7ZIP} x ../test/7za.exe.lz
+sure diff 7za.exe 7za433_ref/bin/7za.exe
+sure rm -f 7za.exe
+
+echo ""
 echo "# EXTRACTING (LZMA) ..."
 echo "#######################"
 
