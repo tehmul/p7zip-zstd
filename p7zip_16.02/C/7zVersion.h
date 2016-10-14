@@ -10,7 +10,7 @@
 #define MY_COPYRIGHT_PD "Igor Pavlov : Public domain"
 #define MY_COPYRIGHT_CR "Copyright (c) 1999-2016 Igor Pavlov"
 
-#define OTHER_CONTRIBUTORS ", p7zip, Yann Collet, Tino Reichardt"
+#define OTHER_CONTRIBUTORS ", p7zip, Yann Collet, Tino Reichardt, Antonio Diaz Diaz, Tehmul Ghyara"
 
 #ifdef USE_COPYRIGHT_CR
   #define MY_COPYRIGHT MY_COPYRIGHT_CR OTHER_CONTRIBUTORS 

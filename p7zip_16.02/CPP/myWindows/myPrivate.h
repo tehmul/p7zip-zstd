@@ -22,4 +22,5 @@ static inline const char * nameWindowToUnix(const char * lpFileName) {
 void mySplitCommandLine(int numArguments, char *arguments[],UStringVector &parts);
 class CStdOutStream;
 void showP7zipInfo(CStdOutStream *so);
+void showZStdInfo(CStdOutStream *so);
 
