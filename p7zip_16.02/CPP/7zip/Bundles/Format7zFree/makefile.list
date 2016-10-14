@@ -73,6 +73,7 @@ SRCS=\
   ../../../../CPP/7zip/Archive/Iso/IsoHeader.cpp \
   ../../../../CPP/7zip/Archive/Iso/IsoIn.cpp \
   ../../../../CPP/7zip/Archive/Iso/IsoRegister.cpp \
+  ../../../../CPP/7zip/Archive/LzHandler.cpp \
   ../../../../CPP/7zip/Archive/LzhHandler.cpp \
   ../../../../CPP/7zip/Archive/LzmaHandler.cpp \
   ../../../../CPP/7zip/Archive/MachoHandler.cpp \
@@ -457,6 +458,8 @@ IsoIn.o : ../../../../CPP/7zip/Archive/Iso/IsoIn.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Iso/IsoIn.cpp
 IsoRegister.o : ../../../../CPP/7zip/Archive/Iso/IsoRegister.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Iso/IsoRegister.cpp
+LzHandler.o : ../../../../CPP/7zip/Archive/LzHandler.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/LzHandler.cpp
 LzhHandler.o : ../../../../CPP/7zip/Archive/LzhHandler.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/LzhHandler.cpp
 LzmaHandler.o : ../../../../CPP/7zip/Archive/LzmaHandler.cpp
@@ -855,6 +858,7 @@ OBJS=\
  IsoHeader.o \
  IsoIn.o \
  IsoRegister.o \
+ LzHandler.o \
  LzhHandler.o \
  LzmaHandler.o \
  MachoHandler.o \

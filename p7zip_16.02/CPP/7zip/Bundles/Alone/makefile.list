@@ -48,6 +48,7 @@ SRCS=\
   ../../../../CPP/7zip/Archive/Common/ParseProperties.cpp \
   ../../../../CPP/7zip/Archive/DeflateProps.cpp \
   ../../../../CPP/7zip/Archive/GzHandler.cpp \
+  ../../../../CPP/7zip/Archive/LzHandler.cpp \
   ../../../../CPP/7zip/Archive/LzmaHandler.cpp \
   ../../../../CPP/7zip/Archive/PpmdHandler.cpp \
   ../../../../CPP/7zip/Archive/SplitHandler.cpp \
@@ -412,6 +413,8 @@ DeflateProps.o : ../../../../CPP/7zip/Archive/DeflateProps.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/DeflateProps.cpp
 GzHandler.o : ../../../../CPP/7zip/Archive/GzHandler.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/GzHandler.cpp
+LzHandler.o : ../../../../CPP/7zip/Archive/LzHandler.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/LzHandler.cpp
 LzmaHandler.o : ../../../../CPP/7zip/Archive/LzmaHandler.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/LzmaHandler.cpp
 PpmdHandler.o : ../../../../CPP/7zip/Archive/PpmdHandler.cpp
@@ -797,6 +800,7 @@ OBJS=\
  ParseProperties.o \
  DeflateProps.o \
  GzHandler.o \
+ LzHandler.o \
  LzmaHandler.o \
  PpmdHandler.o \
  SplitHandler.o \
