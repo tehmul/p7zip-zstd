@@ -56,6 +56,7 @@ add_executable(7za
   "../../../../C/XzEnc.c"
   "../../../../C/XzIn.c"
   "../../../../C/ZStd/entropy_common.c"
+  "../../../../C/ZStd/error_private.c"
   "../../../../C/ZStd/fse_compress.c"
   "../../../../C/ZStd/fse_decompress.c"
   "../../../../C/ZStd/huf_compress.c"

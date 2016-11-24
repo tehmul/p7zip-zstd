@@ -29,6 +29,7 @@ SRCS=\
 SRCS_C=\
   ../../../../C/Alloc.c \
   ../../../../C/ZStd/entropy_common.c \
+  ../../../../C/ZStd/error_private.c \
   ../../../../C/ZStd/fse_compress.c \
   ../../../../C/ZStd/fse_decompress.c \
   ../../../../C/ZStd/huf_compress.c \
@@ -50,6 +51,8 @@ Alloc.o : ../../../../C/Alloc.c
 	$(CC) $(CFLAGS) ../../../../C/Alloc.c
 entropy_common.o : ../../../../C/ZStd/entropy_common.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
+error_private.o : ../../../../C/ZStd/error_private.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/error_private.c
 fse_compress.o : ../../../../C/ZStd/fse_compress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
 fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
@@ -94,6 +97,7 @@ MyWindows.o : ../../../../CPP/Common/MyWindows.cpp
 OBJS=\
  Alloc.o \
  entropy_common.o \
+ error_private.o \
  fse_compress.o \
  fse_decompress.o \
  huf_compress.o \

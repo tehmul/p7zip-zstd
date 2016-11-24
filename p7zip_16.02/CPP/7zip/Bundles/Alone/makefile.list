@@ -241,6 +241,7 @@ SRCS_C=\
   ../../../../C/XzEnc.c \
   ../../../../C/XzIn.c \
   ../../../../C/ZStd/entropy_common.c \
+  ../../../../C/ZStd/error_private.c \
   ../../../../C/ZStd/fse_compress.c \
   ../../../../C/ZStd/fse_decompress.c \
   ../../../../C/ZStd/huf_compress.c \
@@ -331,6 +332,8 @@ XzIn.o : ../../../../C/XzIn.c
 	$(CC) $(CFLAGS) ../../../../C/XzIn.c
 entropy_common.o : ../../../../C/ZStd/entropy_common.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
+error_private.o : ../../../../C/ZStd/error_private.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/error_private.c
 fse_compress.o : ../../../../C/ZStd/fse_compress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_compress.c
 fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
@@ -759,6 +762,7 @@ OBJS=\
  XzEnc.o \
  XzIn.o \
  entropy_common.o \
+ error_private.o \
  fse_compress.o \
  fse_decompress.o \
  huf_compress.o \

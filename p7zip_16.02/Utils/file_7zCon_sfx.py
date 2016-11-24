@@ -17,6 +17,7 @@ files_c=[
  'C/Sha256.c',
  'C/Threads.c',
  'C/ZStd/entropy_common.c',
+ 'C/ZStd/error_private.c',
  'C/ZStd/fse_decompress.c',
  'C/ZStd/huf_decompress.c',
  'C/ZStd/xxhash.c',
