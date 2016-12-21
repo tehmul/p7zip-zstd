@@ -123,9 +123,10 @@ SRCS_C=\
   ../../../../C/ZStd/fse_decompress.c \
   ../../../../C/ZStd/huf_decompress.c \
   ../../../../C/ZStd/xxhash.c \
-  ../../../../C/ZStd/zbuff_decompress.c \
   ../../../../C/ZStd/zstd_common.c \
   ../../../../C/ZStd/zstd_decompress.c \
+  ../../../../C/zstdmt/zstdmt_common.c \
+  ../../../../C/zstdmt/zstdmt_decompress.c \
 
 StdAfx.h.gch : ../../../myWindows/StdAfx.h
 	rm -f StdAfx.h.gch
@@ -172,12 +173,14 @@ huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
 xxhash.o : ../../../../C/ZStd/xxhash.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
-zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
 zstd_common.o : ../../../../C/ZStd/zstd_common.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
 zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
+zstdmt_common.o : ../../../../C/zstdmt/zstdmt_common.c
+	$(CC) $(CFLAGS) ../../../../C/zstdmt/zstdmt_common.c
+zstdmt_decompress.o : ../../../../C/zstdmt/zstdmt_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/zstdmt/zstdmt_decompress.c
 7zDecode.o : ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
 7zExtract.o : ../../../../CPP/7zip/Archive/7z/7zExtract.cpp
@@ -361,9 +364,10 @@ OBJS=\
  fse_decompress.o \
  huf_decompress.o \
  xxhash.o \
- zbuff_decompress.o \
  zstd_common.o \
  zstd_decompress.o \
+ zstdmt_common.o \
+ zstdmt_decompress.o \
  7zDecode.o \
  7zExtract.o \
  7zHandler.o \

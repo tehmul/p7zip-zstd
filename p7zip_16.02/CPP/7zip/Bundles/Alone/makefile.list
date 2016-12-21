@@ -69,6 +69,7 @@ SRCS=\
   ../../../../CPP/7zip/Archive/Zip/ZipOut.cpp \
   ../../../../CPP/7zip/Archive/Zip/ZipRegister.cpp \
   ../../../../CPP/7zip/Archive/Zip/ZipUpdate.cpp \
+  ../../../../CPP/7zip/Archive/ZstdHandler.cpp \
   ../../../../CPP/7zip/Common/CWrappers.cpp \
   ../../../../CPP/7zip/Common/CreateCoder.cpp \
   ../../../../CPP/7zip/Common/FilePathAutoRename.cpp \
@@ -247,11 +248,12 @@ SRCS_C=\
   ../../../../C/ZStd/huf_compress.c \
   ../../../../C/ZStd/huf_decompress.c \
   ../../../../C/ZStd/xxhash.c \
-  ../../../../C/ZStd/zbuff_compress.c \
-  ../../../../C/ZStd/zbuff_decompress.c \
   ../../../../C/ZStd/zstd_common.c \
   ../../../../C/ZStd/zstd_compress.c \
   ../../../../C/ZStd/zstd_decompress.c \
+  ../../../../C/zstdmt/zstdmt_common.c \
+  ../../../../C/zstdmt/zstdmt_compress.c \
+  ../../../../C/zstdmt/zstdmt_decompress.c \
 
 StdAfx.h.gch : ../../../myWindows/StdAfx.h
 	rm -f StdAfx.h.gch
@@ -344,16 +346,18 @@ huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/huf_decompress.c
 xxhash.o : ../../../../C/ZStd/xxhash.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/xxhash.c
-zbuff_compress.o : ../../../../C/ZStd/zbuff_compress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_compress.c
-zbuff_decompress.o : ../../../../C/ZStd/zbuff_decompress.c
-	$(CC) $(CFLAGS) ../../../../C/ZStd/zbuff_decompress.c
 zstd_common.o : ../../../../C/ZStd/zstd_common.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_common.c
 zstd_compress.o : ../../../../C/ZStd/zstd_compress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_compress.c
 zstd_decompress.o : ../../../../C/ZStd/zstd_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/zstd_decompress.c
+zstdmt_common.o : ../../../../C/zstdmt/zstdmt_common.c
+	$(CC) $(CFLAGS) ../../../../C/zstdmt/zstdmt_common.c
+zstdmt_compress.o : ../../../../C/zstdmt/zstdmt_compress.c
+	$(CC) $(CFLAGS) ../../../../C/zstdmt/zstdmt_compress.c
+zstdmt_decompress.o : ../../../../C/zstdmt/zstdmt_decompress.c
+	$(CC) $(CFLAGS) ../../../../C/zstdmt/zstdmt_decompress.c
 7zCompressionMode.o : ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp
 7zDecode.o : ../../../../CPP/7zip/Archive/7z/7zDecode.cpp
@@ -458,6 +462,8 @@ ZipRegister.o : ../../../../CPP/7zip/Archive/Zip/ZipRegister.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Zip/ZipRegister.cpp
 ZipUpdate.o : ../../../../CPP/7zip/Archive/Zip/ZipUpdate.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/Zip/ZipUpdate.cpp
+ZstdHandler.o : ../../../../CPP/7zip/Archive/ZstdHandler.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Archive/ZstdHandler.cpp
 CWrappers.o : ../../../../CPP/7zip/Common/CWrappers.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Common/CWrappers.cpp
 CreateCoder.o : ../../../../CPP/7zip/Common/CreateCoder.cpp
@@ -768,11 +774,12 @@ OBJS=\
  huf_compress.o \
  huf_decompress.o \
  xxhash.o \
- zbuff_compress.o \
- zbuff_decompress.o \
  zstd_common.o \
  zstd_compress.o \
  zstd_decompress.o \
+ zstdmt_common.o \
+ zstdmt_compress.o \
+ zstdmt_decompress.o \
  7zCompressionMode.o \
  7zDecode.o \
  7zEncode.o \
@@ -825,6 +832,7 @@ OBJS=\
  ZipOut.o \
  ZipRegister.o \
  ZipUpdate.o \
+ ZstdHandler.o \
  CWrappers.o \
  CreateCoder.o \
  FilePathAutoRename.o \

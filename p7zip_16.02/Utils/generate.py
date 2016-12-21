@@ -260,7 +260,9 @@ LOCAL_MODULE := {}
 includedirs_7za=[
  "../../../myWindows",
  "../../../",
- "../../../include_windows"
+ "../../../include_windows",
+ "../../../../C/zstd",
+ "../../../../C/zstdmt",
 ]
 
 
@@ -276,7 +278,8 @@ includedirs_lzham=[  # FIXME
 
 includedirs_zstd=[  # FIXME
  "../../../../C",
- "../../../../C/ZStd",
+ "../../../../C/zstd",
+ "../../../../C/zstdmt",
  "../../../../CPP/7zip/Compress",
  "../../../myWindows",
  "../../../",

@@ -18,6 +18,8 @@ INCLUDEPATH = \
   ../../../myWindows \
   ../../../ \
   ../../../include_windows \
+  ../../../../C/zstd \
+  ../../../../C/zstdmt \
 
 DEFINES += EXTERNAL_CODECS
 DEFINES += _FILE_OFFSET_BITS=64

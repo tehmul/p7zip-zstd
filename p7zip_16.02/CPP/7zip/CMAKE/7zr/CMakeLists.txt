@@ -7,6 +7,8 @@ include_directories(
   "../../../myWindows"
   "../../../"
   "../../../include_windows"
+  "../../../../C/zstd"
+  "../../../../C/zstdmt"
 )
 
 add_definitions( -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -DENV_UNIX -D_NO_CRYPTO -DBREAK_HANDLER -DUNICODE -D_UNICODE -DUNIX_USE_WIN_FILE)
@@ -51,11 +53,12 @@ add_executable(7zr
   "../../../../C/ZStd/huf_compress.c"
   "../../../../C/ZStd/huf_decompress.c"
   "../../../../C/ZStd/xxhash.c"
-  "../../../../C/ZStd/zbuff_compress.c"
-  "../../../../C/ZStd/zbuff_decompress.c"
   "../../../../C/ZStd/zstd_common.c"
   "../../../../C/ZStd/zstd_compress.c"
   "../../../../C/ZStd/zstd_decompress.c"
+  "../../../../C/zstdmt/zstdmt_common.c"
+  "../../../../C/zstdmt/zstdmt_compress.c"
+  "../../../../C/zstdmt/zstdmt_decompress.c"
   "../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp"
   "../../../../CPP/7zip/Archive/7z/7zDecode.cpp"
   "../../../../CPP/7zip/Archive/7z/7zEncode.cpp"
@@ -81,6 +84,7 @@ add_executable(7zr
   "../../../../CPP/7zip/Archive/LzmaHandler.cpp"
   "../../../../CPP/7zip/Archive/SplitHandler.cpp"
   "../../../../CPP/7zip/Archive/XzHandler.cpp"
+  "../../../../CPP/7zip/Archive/ZstdHandler.cpp"
   "../../../../CPP/7zip/Common/CWrappers.cpp"
   "../../../../CPP/7zip/Common/CreateCoder.cpp"
   "../../../../CPP/7zip/Common/FilePathAutoRename.cpp"
