@@ -119,6 +119,7 @@ SRCS_C=\
   ../../../../C/Sha256.c \
   ../../../../C/Threads.c \
   ../../../../C/ZStd/entropy_common.c \
+  ../../../../C/ZStd/error_private.c \
   ../../../../C/ZStd/fse_decompress.c \
   ../../../../C/ZStd/huf_decompress.c \
   ../../../../C/ZStd/xxhash.c \
@@ -163,6 +164,8 @@ Threads.o : ../../../../C/Threads.c
 	$(CC) $(CFLAGS) ../../../../C/Threads.c
 entropy_common.o : ../../../../C/ZStd/entropy_common.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/entropy_common.c
+error_private.o : ../../../../C/ZStd/error_private.c
+	$(CC) $(CFLAGS) ../../../../C/ZStd/error_private.c
 fse_decompress.o : ../../../../C/ZStd/fse_decompress.c
 	$(CC) $(CFLAGS) ../../../../C/ZStd/fse_decompress.c
 huf_decompress.o : ../../../../C/ZStd/huf_decompress.c
@@ -354,6 +357,7 @@ OBJS=\
  Sha256.o \
  Threads.o \
  entropy_common.o \
+ error_private.o \
  fse_decompress.o \
  huf_decompress.o \
  xxhash.o \
