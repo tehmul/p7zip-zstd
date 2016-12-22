@@ -3,7 +3,7 @@ RM=rm -f
 
 CFLAGS=-c -I. \
 -I../../../../C \
--I../../../../C/zstd \
+-I../../../../C/ZStd \
 -I../../../../C/zstdmt \
 -I../../../../CPP/myWindows \
 -I../../../../CPP/include_windows \
@@ -12,7 +12,7 @@ $(ALLFLAGS) $(ALLFLAGS_C)
 
 CXXFLAGS=-c -I. \
 -I../../../../C \
--I../../../../C/zstd \
+-I../../../../C/ZStd \
 -I../../../../C/zstdmt \
 -I../../../../CPP/myWindows \
 -I../../../../CPP/include_windows \

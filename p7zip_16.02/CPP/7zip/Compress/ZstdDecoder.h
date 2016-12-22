@@ -8,7 +8,7 @@
 #define ZSTD_STATIC_LINKING_ONLY
 #include "../../../C/Alloc.h"
 #include "../../../C/Threads.h"
-#include "../../../C/zstd/zstd.h"
+#include "../../../C/ZStd/zstd.h"
 #include "../../../C/zstdmt/zstdmt.h"
 
 #include "../../Windows/System.h"
