@@ -25,6 +25,7 @@ SRCS=\
   ../../../../CPP/7zip/Compress/ZstdEncoder.cpp \
   ../../../../CPP/7zip/Compress/ZstdRegister.cpp \
   ../../../../CPP/Common/MyWindows.cpp \
+  ../../../../CPP/Windows/System.cpp \
 
 SRCS_C=\
   ../../../../C/Alloc.c \
@@ -87,6 +88,8 @@ ZstdRegister.o : ../../../../CPP/7zip/Compress/ZstdRegister.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/7zip/Compress/ZstdRegister.cpp
 MyWindows.o : ../../../../CPP/Common/MyWindows.cpp
 	$(CXX) $(CXXFLAGS) ../../../../CPP/Common/MyWindows.cpp
+System.o : ../../../../CPP/Windows/System.cpp
+	$(CXX) $(CXXFLAGS) ../../../../CPP/Windows/System.cpp
 
 OBJS=\
  Alloc.o \
@@ -110,4 +113,5 @@ OBJS=\
  ZstdEncoder.o \
  ZstdRegister.o \
  MyWindows.o \
+ System.o \
 

@@ -24,4 +24,5 @@ files_cpp=[
  'CPP/7zip/Compress/ZstdRegister.cpp',
 # 'CPP/7zip/Archive/ZstdHandler.cpp',
  'CPP/Common/MyWindows.cpp',
+ 'CPP/Windows/System.cpp',
 ]
