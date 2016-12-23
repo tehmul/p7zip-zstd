@@ -3,7 +3,7 @@
 #define MY_VER_BUILD 0
 #define MY_VERSION_NUMBERS "16.02"
 #define MY_VERSION "16.02"
-#define MY_DATE "2016-12-21"
+#define MY_DATE "2016-12-22"
 #undef MY_COPYRIGHT
 #undef MY_VERSION_COPYRIGHT_DATE
 #define MY_AUTHOR_NAME "Igor Pavlov"

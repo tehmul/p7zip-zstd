@@ -1,19 +1,36 @@
-// ZstdDecoder.h
-// (C) 2016 Rich Geldreich, Tino Reichardt
+// (C) 2016 Tino Reichardt
 
-#include "StdAfx.h"
+/**
+ * you can define ZSTD_LEGACY_SUPPORT to be backwards compatible (0.1 .. 0.7)
+ * /TR 2016-10-01
+ */
 
 #define ZSTD_STATIC_LINKING_ONLY
 #include "../../../C/Alloc.h"
+#include "../../../C/Threads.h"
 #include "../../../C/ZStd/zstd.h"
-#include "../../../C/ZStd/zbuff.h"
-#include "../../../C/ZStd/zstd_legacy.h"
+#include "../../../C/zstdmt/zstdmt.h"
 
+#include "../../Windows/System.h"
 #include "../../Common/Common.h"
 #include "../../Common/MyCom.h"
 #include "../ICoder.h"
 #include "../Common/StreamUtils.h"
 #include "../Common/RegisterCodec.h"
+#include "../Common/ProgressMt.h"
+
+struct ZstdStream {
+  ISequentialInStream *inStream;
+  ISequentialOutStream *outStream;
+  ICompressProgressInfo *progress;
+  UInt64 *processedIn;
+  UInt64 *processedOut;
+  CCriticalSection *cs;
+  int flags;
+};
+
+extern int ZstdRead(void *Stream, ZSTDMT_Buffer * in);
+extern int ZstdWrite(void *Stream, ZSTDMT_Buffer * in);
 
 namespace NCompress {
 namespace NZSTD {
@@ -23,7 +40,7 @@ struct DProps
   DProps() { clear (); }
   void clear ()
   {
-    memset (this, 0, sizeof (*this));
+    memset(this, 0, sizeof (*this));
     _ver_major = ZSTD_VERSION_MAJOR;
     _ver_minor = ZSTD_VERSION_MINOR;
     _level = 1;
@@ -36,73 +53,44 @@ struct DProps
 };
 
 class CDecoder:public ICompressCoder,
-  public ICompressSetDecoderProperties2, public ICompressSetBufSize,
-#ifndef NO_READ_FROM_CODER
-  public ICompressSetInStream,
-  public ICompressSetOutStreamSize, public ISequentialInStream,
-#endif
+  public ICompressSetDecoderProperties2,
   public CMyUnknownImp
 {
   CMyComPtr < ISequentialInStream > _inStream;
-  Byte *_inBuf;
-  Byte *_outBuf;
-  UInt32 _inPos;
-  UInt32 _inSize;
-  bool _eofFlag;
-
-  void *_state;
 
   DProps _props;
-  bool _propsWereSet;
+  CCriticalSection cs;
 
-  bool _outSizeDefined;
-  UInt64 _outSize;
-  UInt64 _inSizeProcessed;
-  UInt64 _outSizeProcessed;
+  UInt64 _processedIn;
+  UInt64 _processedOut;
+  UInt32 _inputSize;
+  UInt32 _numThreads;
 
-  UInt32 _inBufSizeAllocated;
-  UInt32 _outBufSizeAllocated;
-  UInt32 _inBufSize;
-  UInt32 _outBufSize;
-
-  HRESULT CreateBuffers ();
-  HRESULT CodeSpec (ISequentialInStream * inStream, ISequentialOutStream * outStream, ICompressProgressInfo * progress);
-  HRESULT SetOutStreamSizeResume (const UInt64 * outSize);
-  HRESULT CreateDecompressor ();
-
-  // wrapper for different versions
-  void *ZB_createDCtx(void);
-  size_t ZB_freeDCtx(void *dctx);
-  size_t ZB_decompressInit(void *dctx);
-  size_t ZB_decompressContinue(void *dctx, void* dst, size_t *dstCapacityPtr, const void* src, size_t *srcSizePtr);
+  HRESULT ErrorOut(size_t code);
+  HRESULT CodeSpec(ISequentialInStream *inStream, ISequentialOutStream *outStream, ICompressProgressInfo *progress);
+  HRESULT SetOutStreamSizeResume(const UInt64 *outSize);
 
 public:
 
-  MY_QUERYINTERFACE_BEGIN2 (ICompressCoder)
-  MY_QUERYINTERFACE_ENTRY (ICompressSetDecoderProperties2)
-  MY_QUERYINTERFACE_ENTRY (ICompressSetBufSize)
+  MY_QUERYINTERFACE_BEGIN2(ICompressCoder)
+  MY_QUERYINTERFACE_ENTRY(ICompressSetDecoderProperties2)
 #ifndef NO_READ_FROM_CODER
-  MY_QUERYINTERFACE_ENTRY (ICompressSetInStream)
-  MY_QUERYINTERFACE_ENTRY (ICompressSetOutStreamSize)
-  MY_QUERYINTERFACE_ENTRY (ISequentialInStream)
+  MY_QUERYINTERFACE_ENTRY(ICompressSetInStream)
 #endif
   MY_QUERYINTERFACE_END
 
   MY_ADDREF_RELEASE
-  STDMETHOD (Code)(ISequentialInStream * inStream, ISequentialOutStream * outStream, const UInt64 * inSize, const UInt64 * outSize, ICompressProgressInfo * progress);
-  STDMETHOD (SetDecoderProperties2) (const Byte * data, UInt32 size);
-  STDMETHOD (SetOutStreamSize) (const UInt64 * outSize);
-  STDMETHOD (SetInBufSize) (UInt32 streamIndex, UInt32 size);
-  STDMETHOD (SetOutBufSize) (UInt32 streamIndex, UInt32 size);
+  STDMETHOD (Code)(ISequentialInStream *inStream, ISequentialOutStream *outStream, const UInt64 *inSize, const UInt64 *outSize, ICompressProgressInfo *progress);
+  STDMETHOD (SetDecoderProperties2)(const Byte *data, UInt32 size);
+  STDMETHOD (SetOutStreamSize)(const UInt64 *outSize);
+  STDMETHODIMP SetNumberOfThreads(UInt32 numThreads);
 
 #ifndef NO_READ_FROM_CODER
-  STDMETHOD (SetInStream) (ISequentialInStream * inStream);
-  STDMETHOD (ReleaseInStream) ();
-  STDMETHOD (Read) (void *data, UInt32 size, UInt32 * processedSize);
-  HRESULT CodeResume (ISequentialOutStream * outStream, const UInt64 * outSize, ICompressProgressInfo * progress);
-
-  UInt64 GetInputProcessedSize () const { return _inSizeProcessed; }
+  STDMETHOD (SetInStream)(ISequentialInStream *inStream);
+  STDMETHOD (ReleaseInStream)();
+  UInt64 GetInputProcessedSize() const { return _processedIn; }
 #endif
+  HRESULT CodeResume(ISequentialOutStream *outStream, const UInt64 *outSize, ICompressProgressInfo *progress);
 
   CDecoder();
   virtual ~CDecoder();

@@ -7,14 +7,12 @@ files_c=[
  'C/ZStd/huf_compress.c',
  'C/ZStd/huf_decompress.c',
  'C/ZStd/xxhash.c',
- 'C/ZStd/zbuff_compress.c',
- 'C/ZStd/zbuff_decompress.c',
  'C/ZStd/zstd_common.c',
  'C/ZStd/zstd_compress.c',
  'C/ZStd/zstd_decompress.c',
- 'C/ZStd/zstd_v05.c',
- 'C/ZStd/zstd_v06.c',
- 'C/ZStd/zstd_v07.c',
+ 'C/zstdmt/zstdmt_common.c',
+ 'C/zstdmt/zstdmt_compress.c',
+ 'C/zstdmt/zstdmt_decompress.c',
 ]
 
 files_cpp=[
@@ -24,5 +22,7 @@ files_cpp=[
  'CPP/7zip/Compress/ZstdDecoder.cpp',
  'CPP/7zip/Compress/ZstdEncoder.cpp',
  'CPP/7zip/Compress/ZstdRegister.cpp',
+# 'CPP/7zip/Archive/ZstdHandler.cpp',
  'CPP/Common/MyWindows.cpp',
+ 'CPP/Windows/System.cpp',
 ]

@@ -18,6 +18,8 @@ INCLUDEPATH = \
   ../../../myWindows \
   ../../../ \
   ../../../include_windows \
+  ../../../../C/zstd \
+  ../../../../C/zstdmt \
 
 DEFINES += _FILE_OFFSET_BITS=64
 DEFINES += _LARGEFILE_SOURCE
@@ -63,11 +65,12 @@ SOURCES +=  \
   ../../../../C/ZStd/huf_compress.c \
   ../../../../C/ZStd/huf_decompress.c \
   ../../../../C/ZStd/xxhash.c \
-  ../../../../C/ZStd/zbuff_compress.c \
-  ../../../../C/ZStd/zbuff_decompress.c \
   ../../../../C/ZStd/zstd_common.c \
   ../../../../C/ZStd/zstd_compress.c \
   ../../../../C/ZStd/zstd_decompress.c \
+  ../../../../C/zstdmt/zstdmt_common.c \
+  ../../../../C/zstdmt/zstdmt_compress.c \
+  ../../../../C/zstdmt/zstdmt_decompress.c \
   ../../../../CPP/7zip/Archive/7z/7zCompressionMode.cpp \
   ../../../../CPP/7zip/Archive/7z/7zDecode.cpp \
   ../../../../CPP/7zip/Archive/7z/7zEncode.cpp \
@@ -93,6 +96,7 @@ SOURCES +=  \
   ../../../../CPP/7zip/Archive/LzmaHandler.cpp \
   ../../../../CPP/7zip/Archive/SplitHandler.cpp \
   ../../../../CPP/7zip/Archive/XzHandler.cpp \
+  ../../../../CPP/7zip/Archive/ZstdHandler.cpp \
   ../../../../CPP/7zip/Common/CWrappers.cpp \
   ../../../../CPP/7zip/Common/CreateCoder.cpp \
   ../../../../CPP/7zip/Common/FilePathAutoRename.cpp \

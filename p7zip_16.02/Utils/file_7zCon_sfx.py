@@ -21,9 +21,11 @@ files_c=[
  'C/ZStd/fse_decompress.c',
  'C/ZStd/huf_decompress.c',
  'C/ZStd/xxhash.c',
- 'C/ZStd/zbuff_decompress.c',
+# 'C/ZStd/zbuff_decompress.c',
  'C/ZStd/zstd_common.c',
  'C/ZStd/zstd_decompress.c',
+ 'C/zstdmt/zstdmt_common.c',
+ 'C/zstdmt/zstdmt_decompress.c',
 ]
 
 files_cpp=[

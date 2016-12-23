@@ -1,12 +1,10 @@
-// ZstdEncoder.h
-// (C) 2016 Rich Geldreich, Tino Reichardt
-
-#include "StdAfx.h"
+// (C) 2016 Tino Reichardt
 
 #define ZSTD_STATIC_LINKING_ONLY
 #include "../../../C/Alloc.h"
+#include "../../../C/Threads.h"
 #include "../../../C/ZStd/zstd.h"
-#include "../../../C/ZStd/zbuff.h"
+#include "../../../C/zstdmt/zstdmt.h"
 
 #include "../../Common/Common.h"
 #include "../../Common/MyCom.h"
@@ -22,7 +20,7 @@ struct CProps
   CProps() { clear (); }
   void clear ()
   {
-    memset (this, 0, sizeof (*this));
+    memset(this, 0, sizeof (*this));
     _ver_major = ZSTD_VERSION_MAJOR;
     _ver_minor = ZSTD_VERSION_MINOR;
     _level = 3;
@@ -40,37 +38,25 @@ class CEncoder:
   public ICompressWriteCoderProperties,
   public CMyUnknownImp
 {
-  ZBUFF_CCtx *_state;
-
   CProps _props;
 
-  Byte *_inBuf;
-  Byte *_outBuf;
-  UInt32 _inPos;
-  UInt32 _inSize;
+  UInt64 _processedIn;
+  UInt64 _processedOut;
+  UInt32 _inputSize;
+  UInt32 _numThreads;
 
-  UInt32 _inBufSizeAllocated;
-  UInt32 _outBufSizeAllocated;
-  UInt32 _inBufSize;
-  UInt32 _outBufSize;
-
-  UInt64 _inSizeProcessed;
-  UInt64 _outSizeProcessed;
-
-  HRESULT CreateCompressor ();
-  HRESULT CreateBuffers ();
+  ZSTDMT_CCtx *_ctx;
+  HRESULT ErrorOut(size_t code);
 
 public:
-    MY_UNKNOWN_IMP2 (ICompressSetCoderProperties, ICompressWriteCoderProperties)
-    STDMETHOD (Code) (ISequentialInStream * inStream, ISequentialOutStream *
-      outStream, const UInt64 * inSize, const UInt64 * outSize,
-      ICompressProgressInfo * progress);
-    STDMETHOD (SetCoderProperties) (const PROPID * propIDs,
-      const PROPVARIANT *props, UInt32 numProps);
-    STDMETHOD (WriteCoderProperties) (ISequentialOutStream * outStream);
+  MY_UNKNOWN_IMP2 (ICompressSetCoderProperties, ICompressWriteCoderProperties)
+  STDMETHOD (Code)(ISequentialInStream *inStream, ISequentialOutStream *outStream, const UInt64 *inSize, const UInt64 *outSize, ICompressProgressInfo *progress);
+  STDMETHOD (SetCoderProperties)(const PROPID *propIDs, const PROPVARIANT *props, UInt32 numProps);
+  STDMETHOD (WriteCoderProperties)(ISequentialOutStream *outStream);
+  STDMETHODIMP SetNumberOfThreads(UInt32 numThreads);
 
-    CEncoder();
-    virtual ~CEncoder();
+  CEncoder();
+  virtual ~CEncoder();
 };
 
 }}

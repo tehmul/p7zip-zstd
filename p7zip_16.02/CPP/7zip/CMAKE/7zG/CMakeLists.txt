@@ -7,6 +7,8 @@ include_directories(
   "../../../myWindows"
   "../../../"
   "../../../include_windows"
+  "../../../../C/zstd"
+  "../../../../C/zstdmt"
 )
 
 add_definitions( -DLANG -DEXTERNAL_CODECS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -DENV_UNIX -DUNICODE -D_UNICODE -DUNIX_USE_WIN_FILE)
