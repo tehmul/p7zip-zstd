@@ -3230,7 +3230,8 @@ static void ZSTDv05_decodeSequence(seq_t* seq, seqState_t* seqState)
             if (litLength&1) litLength>>=1, dumps += 3;
             else litLength = (U16)(litLength)>>1, dumps += 2;
         }
-        if (dumps >= de) dumps = de-1;   /* late correction, to avoid read overflow (data is now corrupted anyway) */
+        if (dumps > de) { litLength = MaxLL+255; }  /* late correction, to avoid using uninitialized memory */
+        if (dumps >= de) { dumps = de-1; }  /* late correction, to avoid read overflow (data is now corrupted anyway) */
     }
 
     /* Offset */
@@ -3263,7 +3264,8 @@ static void ZSTDv05_decodeSequence(seq_t* seq, seqState_t* seqState)
             if (matchLength&1) matchLength>>=1, dumps += 3;
             else matchLength = (U16)(matchLength)>>1, dumps += 2;
         }
-        if (dumps >= de) dumps = de-1;   /* late correction, to avoid read overflow (data is now corrupted anyway) */
+        if (dumps > de) { matchLength = MaxML+255; }  /* late correction, to avoid using uninitialized memory */
+        if (dumps >= de) { dumps = de-1; }  /* late correction, to avoid read overflow (data is now corrupted anyway) */
     }
     matchLength += MINMATCH;
 
@@ -3581,6 +3583,35 @@ size_t ZSTDv05_decompress(void* dst, size_t maxDstSize, const void* src, size_t 
 #endif
 }
 
+size_t ZSTDv05_findFrameCompressedSize(const void *src, size_t srcSize)
+{
+    const BYTE* ip = (const BYTE*)src;
+    size_t remainingSize = srcSize;
+    blockProperties_t blockProperties;
+
+    /* Frame Header */
+    if (srcSize < ZSTDv05_frameHeaderSize_min) return ERROR(srcSize_wrong);
+    if (MEM_readLE32(src) != ZSTDv05_MAGICNUMBER) return ERROR(prefix_unknown);
+    ip += ZSTDv05_frameHeaderSize_min; remainingSize -= ZSTDv05_frameHeaderSize_min;
+
+    /* Loop on each block */
+    while (1)
+    {
+        size_t cBlockSize = ZSTDv05_getcBlockSize(ip, remainingSize, &blockProperties);
+        if (ZSTDv05_isError(cBlockSize)) return cBlockSize;
+
+        ip += ZSTDv05_blockHeaderSize;
+        remainingSize -= ZSTDv05_blockHeaderSize;
+        if (cBlockSize > remainingSize) return ERROR(srcSize_wrong);
+
+        if (cBlockSize == 0) break;   /* bt_end */
+
+        ip += cBlockSize;
+        remainingSize -= cBlockSize;
+    }
+
+    return ip - (const BYTE*)src;
+}
 
 /* ******************************
 *  Streaming Decompression API

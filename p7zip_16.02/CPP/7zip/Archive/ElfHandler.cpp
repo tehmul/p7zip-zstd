@@ -156,7 +156,7 @@ bool CHeader::Parse(const Byte *p)
 
 #define PT_PHDR 6
 
-static const char *g_SegnmentTypes[] =
+static const char * const g_SegnmentTypes[] =
 {
   "Unused",
   "Loadable segment",
@@ -553,6 +553,24 @@ static const CUInt32PCharPair g_OS[] =
   { 97, "ARM" },
   { 255, "Standalone" }
 };
+
+#define k_Machine_ARM 40
+
+/*
+#define EF_ARM_ABIMASK        0xFF000000
+#define EF_ARM_BE8            0x00800000
+#define EF_ARM_GCCMASK        0x00400FFF
+#define EF_ARM_ABI_FLOAT_SOFT 0x00000200
+#define EF_ARM_ABI_FLOAT_HARD 0x00000400
+*/
+
+static const CUInt32PCharPair g_ARM_Flags[] =
+{
+  { 9, "SF" },
+  { 10, "HF" },
+  { 23, "BE8" }
+};
+
 
 #define ET_NONE 0
 #define ET_REL  1
