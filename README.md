@@ -1,14 +1,20 @@
 # p7zip-zstd
-p7zip with ZStandard support. 
+
+[p7zip](http://p7zip.sourceforge.net/) with [ZStandard](https://github.com/facebook/zstd) support.
 
 ## Build instructions:
 
-- Compile:
+- From `p7zip_*` folder:
+- Optionally copy `makefile.{OS_arch_compiler}` over `makefile.machine`, e.g. building for macOS needs it.
+  Standard makefile.machine is for Linux systems.
+- Compile "everything":
 ```sh
-make all3 all4
+make all4
 sudo make install
 ```
-(Read makefile.common to see available make targets.)
+
+Read `makefile.common` to see available make targets. More build instructions in `p7zip_*/README`.
+
 
 ## Usage
 
