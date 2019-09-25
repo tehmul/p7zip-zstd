@@ -17,6 +17,10 @@
   https://github.com/facebook/zstd
   Their (LGPL-compatible) license can be found in LICENSE-zstd.txt.
 
+  The files in C/zstdmt are from commits d543ff4, 0c06f1d, 0892eef of
+  https://github.com/mcmilk/zstdmt
+  Their (LGPL-compatible) license can be found in LICENSE-zstdmt.txt.
+
 
   GNU LGPL information
   --------------------
