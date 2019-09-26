@@ -1,5 +1,5 @@
 
-OPTFLAGS=-O
+OPTFLAGS=-O3 -flto -DNDEBUG
 
 # don't use -DNDEBUG in order to use MacOSX wxWidgets
 
@@ -17,7 +17,8 @@ ALLFLAGS=-m64 ${OPTFLAGS}  \
 XX=/usr/bin/llvm-g++
 CC=/usr/bin/llvm-gcc
 
-LINK_SHARED=-bundle
+LINK_EXE=-s
+LINK_SHARED=-s -bundle
 
 LOCAL_LIBS=-framework CoreFoundation
 LOCAL_LIBS_DLL=$(LOCAL_LIBS)
