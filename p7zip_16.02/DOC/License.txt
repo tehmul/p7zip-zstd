@@ -10,8 +10,16 @@
     1) CPP/7zip/Compress/Rar* files:  GNU LGPL + unRAR restriction
     2) All other files:  GNU LGPL
 
-  The GNU LGPL + unRAR restriction means that you must follow both 
+  The GNU LGPL + unRAR restriction means that you must follow both
   GNU LGPL rules and unRAR restriction rules.
+
+  The files in C/ZStd are from commit 78063ca2 of
+  https://github.com/facebook/zstd
+  Their (LGPL-compatible) license can be found in LICENSE-zstd.txt.
+
+  The files in C/zstdmt are from commits d543ff4, 0c06f1d, 0892eef of
+  https://github.com/mcmilk/zstdmt
+  Their (LGPL-compatible) license can be found in LICENSE-zstdmt.txt.
 
 
   GNU LGPL information
@@ -36,14 +44,14 @@
   unRAR restriction
   -----------------
 
-    The decompression engine for RAR archives was developed using source 
+    The decompression engine for RAR archives was developed using source
     code of unRAR program.
     All copyrights to original unRAR code are owned by Alexander Roshal.
 
     The license for original unRAR code has the following restriction:
 
-    The unRAR sources cannot be used to re-create the RAR compression algorithm, 
-    which is proprietary. Distribution of modified unRAR sources in separate form 
+    The unRAR sources cannot be used to re-create the RAR compression algorithm,
+    which is proprietary. Distribution of modified unRAR sources in separate form
     or as a part of other software is permitted, provided that it is clearly
     stated in the documentation and source comments that the code may
     not be used to develop a RAR (WinRAR) compatible archiver.

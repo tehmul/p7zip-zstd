@@ -3,3 +3,7 @@
 *.orig
 *.rej
 *.desktop
+
+artifacts
+*-tmp
+stevedore-*
