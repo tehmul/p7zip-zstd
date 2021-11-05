@@ -28,6 +28,21 @@ mac-x64:
       paths:
         - 'artifacts/*'
 
+mac-arm64:
+  name: 'Build 7za - Mac arm64'
+  agent:
+    type: Unity::VM::osx
+    image: buildfarm/mac:stable
+    flavor: m1.mac
+  commands:
+    - cp p7zip_*/makefile.macosx_llvm_64bits_arm p7zip_*/makefile.machine
+    - cd p7zip_* && make -j "$(sysctl -n hw.ncpu)" 7za
+    - mkdir -p artifacts && ln p7zip_*/bin/7za artifacts/7za-mac-arm64
+  artifacts:
+    artifacts:
+      paths:
+        - 'artifacts/*'
+
 publish:
   name: 'Publish 7za Stevedore artifacts, including source (GPL)'
   agent:
@@ -43,3 +58,4 @@ publish:
   dependencies:
     - .yamato/yamato-ci.yml#linux-x64
     - .yamato/yamato-ci.yml#mac-x64
+    - .yamato/yamato-ci.yml#mac-arm64
